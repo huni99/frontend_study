@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span{/* 인라인 태그는 상하 여백이 불가하고 좌우 여백만 가능*/
+      margin: 10px;
+      padding: 5px;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <!-- 인라인 요소는 글자를 다루기 위한 요소 -->
+   <!-- 인라인 요소는 수평으로 쌓임 -->
+   <!-- 줄바꿈 -> br -->
+   <span>hello world</span>
+   <span>hello</span>
+   <br>
+   <!-- 태그에 바로 스타일 지정 가능 -->
+   <span style="width: 10px;">hello</span>
+   <span style="height: 10px;">world</span>
+   <!--  -->
+   <span style="margin: 30px;background-color: red;">hello</span>
+   <span style="margin: 20px;background-color: red;">world</span>
+   <!-- 인라인 요소 안에 블록요소 사용금지 (웹 표준 에러) -->
+    <!-- 글자안에는 상자를 넣을수 없다고 생각하면 편함 -->
+     <span>
+      <div>div in span</div>
+     </span>
+     <span>
+      <span>span in span</span>
+     </span>
+     <div>
+      <span>div in span</span>
+     </div>
+  </body>
+  </html>
