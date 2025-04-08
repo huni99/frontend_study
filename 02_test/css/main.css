@@ -1,5 +1,11 @@
 div{
   color: red;
   font-size :100px;
-  
+
+}
+.logo {
+  width: 500px;
+  height: 500px;
+  color: green;
+  background-image: url("../img/logo.png");
 }
