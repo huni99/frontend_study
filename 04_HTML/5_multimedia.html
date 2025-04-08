@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- image(인라인):글자 취급 ,이미지를 삽입 --> 
+  <!-- 샘플 이미지 제공 서비스
+      https://picsum.photos/500/200-->
+  <img src="https://picsum.photos/500/200" alt="랜덤">
+  <!-- audio(인라인):오디오 컨텐츠 삽입 및 재생 --> 
+  <!-- HTML에서 지원하는 포맷: MP3,WAV,OGG -->
+  <audio src="Kalimba.mp3" controls></audio>
+  <!-- 브라우저마다 또는 브라우저의 버전에 따라 지원하는 확장자 형식이 다르기 때문에 정상 동작
+   하지않을수 있음 
+   =>source 태그 (대체 파일 지정)으로 해결
+   -->
+   <audio controls>
+    <source src="./Kalimba.mp3" type="audio/mpeg">
+    <source src="./Kalimba.ogg" type="audio/ogg">
+   </audio>
+  <!-- audio 태그의 속성들 -->
+  <audio controls autoplay loop muted> <!--자동재생 무한반복 음소거-->
+    <source src="./horse.mp3" type="audio/mpeg">
+    <source src="./horse.ogg" type="audio/ogg">
+   </audio>
+   <!-- video(인라인) 비디오 콘텐츠 삽입 및 재생 -->
+   <!-- HTML에서 지원하는 포맷: MP4, WebM, OGG -->
+   <video width="320" height="240" controls>
+    <source src="Wildlife.mp4"type="video/mp4">
+    <source src="Wildlife.webm"type="video/webm">
+   </video>
+   <!-- video 태그 속성들들 -->
+   <video autoplay muted  width="320" height="240" controls >
+    <source src="Wildlife.mp4"type="video/mp4">
+    <source src="Wildlife.webm"type="video/webm">
+   </video>
+  </body>
+</html>
