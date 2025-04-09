@@ -77,5 +77,99 @@
      <label>
        <input type="radio">banana
      </label>
+      <!-- name 속성으로 그룹화 -->
+<!-- 체크박스는 중복 선택 가능, 라디오 버튼은 그룹당 한 개만 선택 가능 -->
+<label>
+  <input type="radio" name="fruit" checked> Apple
+</label>
+<label>
+  <input type="radio" name="fruit"> Banana
+</label>
+<hr>
+<!-- 그밖에 다른 입력 양식들 (w3school 참고) -->
+<!-- button -->
+  <input type="button" value="닫기">
+  <button type="button">닫기</button> <!-- 버튼 태그의 장점 
+요소 내부에 텍스트 뿐만 아니라 다른 태그를 넣을 수 있다-->
+<button type="button"><b>닫기</b>
+테스트</button>
+
+<hr>
+<!-- 색상 선택도구(color picker) -->
+<label for="favcolor">색상 선택:</label>
+<input type="color" id="favcolor" value="#ff0045">
+<hr>
+<!-- 날짜 -->
+<label for="birthday">생일:</label>
+<input type="date" id="birthday">
+<!-- 날짜+시간 -->
+<label for="birthdaytime">생일(날짜/시간):</label>
+<input type="datetime-local" id="birthdaytime">
+<!-- 시간 -->
+<label for="time">시간</label>
+<input type="time" id="time">
+<!-- 이메일 :submit 할때 자동으로 이메일 형식 유효성 검사(정말 간단한)를 실시함-->
+<form action="/signup">
+  <label for="email">이메일</label>
+  <input type="email" id="email">
+  <button type="submit">전송</button>
+</form>
+
+<hr>
+<!-- 파일 첨부 -->
+<label for="myfile">파일선택</label>
+<input type="file" id="myfile">
+<br>
+<label for="myfiles">파일 여러개 선택</label>
+<input type="file" id="myfiles" multiple>
+
+<hr>
+
+<!-- 범위 선택(기본값 :0~100) -->
+ <label for="volume">음량 0~10</label>
+ <input type="range" id="volume" min="0" max="10" step="2">
+<!-- 비밀번호  -->
+ <label for="password">비밀번호</label>
+ <input type="password"id="password" maxlength="10">
+ 
+ <hr>
+ <!-- 셀렉트 박스(콤보 박스) -->
+ <!-- 속성
+      value: option 태그에서 서버로 전송되는 선택한 항목의 실제 값 
+      selected: 항목을 미리 선택-->
+ <label for="cars">차량 선택</label>
+ <select id="cars">
+
+  <option value="null">선택</option>
+  <option value="volvo">volvo</option>
+  <option value="benz">benz</option>
+  <option value="audi" selected>audi</option>
+ </select>
+ <hr>
+ <!-- 여러 줄 입력 
+       textarea 태그를 통해 여러줄 입력 박스를 만듦 
+       cols , rows로 행렬 줄수 정함
+       spellchek 를 통해 의미없는 영어 체크를 안할수있음-->
+ <p>
+  <label for="multi">여러줄 텍스트</label>
+</p>
+  <textarea type="text" id="multi" cols="30"rows="6"> </textarea>
+  <br>
+  <textarea type="text" id="multi" cols="30"rows="6" spellcheck="false"> </textarea>
+  <br>
+  <!-- 사용자가 사이즈를 조절 할 수 없게함 -->
+  <textarea type="text" id="multi" cols="30"rows="6" style="resize: none;"> </textarea>
+
+<hr>
+<!-- form(동기식): 사용자가 작성한 내용을 서버로 전송한다. 어떤 서버로 보낼지 경로, 어떤 방식(get,post)으로 전달할지 설정 해야함
+ get: url에 데이터를 담아 보냄으로 보안성이 없다 보낼수 있는 데이터 양이 적다
+ post: 데이터가 숨겨져서 보내지기때문에 보안성이 높다 많은 양의 데이터를 보낼 수 있다. -->
+<form action="/login" method="get">
+  
+  <input type="text"name="id">
+  <input type="password"name="pw">
+  <button type="submit">로그인</button>
+
+</form>
 </body>
 </html>
