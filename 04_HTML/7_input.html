@@ -4,8 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    /*  :  가상 클래스 선택자 
+        :: 가상 요소 선택자*/
+    .hidden:focus::placeholder{
+      color: transparent;
+    }
+  </style>
 </head>
 <body>
+  <!-- input(인라인-블록) 사용자로부터 데이터를 입력받는 요소 -->
+  <!-- 인라인- 블록
+    기본적인 특징은 인라인 요소와 동일 추가로 블록요소처럼 가로/세로 길이와 상하/좌우 여백을 모두 지정 가능-->
+  <input type="text" >
   
+  <!-- 텍스트 입력창에 값을 미리 넣어두고 싶을 경우 -->
+  <br>
+  <input type="text" value="미리지정값">
+  <!-- 입력할 값의 힌트  -->
+  <br>
+  <input type="text" placeholder="값을 입력하시오">
+  <br>
+  <!-- 포커스시 사라지는 힌트  -->
+  <input type="text" placeholder="값을 입력하시오 " class="hidden">
+  <!-- 비활성화 :수정 불가, Tap키로 선택(focus)불가 submit 불가-->
+  <input type="text" value="disabled 테스트" disabled>
+  <!-- 읽기 전용:수정 불가, Tap키로 선택(focus)가능 submit 가능-->
+  <input type="text" value="readonly 테스트" readonly>
+  <hr>
+  
+  
+  
+  
+  <!-- 체크박스 -->
+  <input type="checkbox">apple
+  <input type="checkbox">banana
+  <!-- 
+    label 바인딩 방법 2가지
+    1.label 요소 내부에 input 요소를 배치 (label 하나당 요소 하나씩만 배치해야함)
+    2.for 속성이 input 요소의 id 속성과 같아야 함 
+    -->
+    <label>
+     <input type="checkbox">apple
+    </label>
+    <label>
+      <input type="checkbox">banana
+    </label>
+    <br>
+    <input type="checkbox" id="apple">
+    <label for="apple">Apple</label>
+    <input type="checkbox" id="banana">
+    <label for="banana">Banana</label>
+    <!-- 
+    label 사용 이점(웹 접근성과 관련)
+    1. 매우 작은 영역(예: 확인란)을 클릭하는 데 어려움이 있는 사용자
+    - 사용자가 요소 내의 텍스트를 클릭하면 <label>입력이 토글되기 때문(히트 영역이 증가함)
+    2. 스크린 리더 사용자(사용자가 요소에 초점을 맞추면 레이블을 소리내어 읽음)
+  -->
+    <!-- 값을 미리 체크 -->
+    <label>
+      <input type="checkbox" >apple
+     </label>
+     <label>
+       <input type="checkbox"checked>banana
+     </label>
+
+     <hr>
+     <!-- 라디오 버튼 -->
+     <label>
+      <input type="radio" >apple
+     </label>
+     <label>
+       <input type="radio">banana
+     </label>
 </body>
 </html>
