@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      /* cell간에 경계를 합치는 속성 */
+       border-collapse: collapse;
+       margin-top: 20px;
+       
+    }
+    td,th{
+      /* 선(테두리): 색상 두께 종류 */
+      border:#000 3px solid;
+      padding: 20px;
+      font-weight: bold;
+      color: chocolate
+      
+      
+    }
+    th{
+      color: #000;
+    }
+   
+
+    
+  
+      
+  </style>
+</head>
+<body>
+  <!-- table: 표 ,행과 열로 구성되어있다 행:row 열 :column -->
+  <!-- 주로 게시판, 표 형태의 목록 또는 장바구니 같은 것을 만들 때 또는 실제 엑셀이나 구글 시트 같은 '표 형태' 가 필요한 경우에만 사용 
+  table로 레이아웃 작업을 하면 안됨!(레이아웃은 css 기능으로 작업을 해야함 )
+    -->
+  <table>
+    <!-- table row :하나의 행-->
+    <!-- table 자식으로는 tr,td가 아니라 tbody가 생략되어있다  
+     table>tbody>td 로 선택해도되고
+     table td 로선택해도 된다 -->
+    <tr>
+      <td>A</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>D</td>
+   </tr>
+  </table>
+  <!-- thead,tbody,tfoot,th -->
+   <table>
+    <!-- table head : 머리글 행은 이 안에 -->
+     <thead>
+      <tr>
+        <!-- table header:타이틀(제목) -->
+         <th> HEAD1</th>
+         <th> HEAD2</th>
+         <th> HEAD3</th>
+      </tr>
+     </thead>
+    <!-- table body : 본문 행은 이 안에 -->
+     <tbody>
+      <tr>
+        <td>사람1</td>
+        <td>사람2</td>
+        <td>사람3</td>      
+      </tr>
+      <tr>
+        <td>고니</td>
+        <td>피터</td>
+        <td>엘리스</td>      
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>25</td>
+        <td>36</td>      
+      </tr>
+     </tbody>
+    <!-- table foot : 바닥글 행은 이 안에 -->
+     <tfoot>
+      <tr>
+        <td>end1</td>
+        <td>end2</td>
+        <td>end3</td>
+      </tr>
+
+     </tfoot>
+   </table>
+
+
+   <!-- colspan,rowspan: 셀 병합 (merge) -->
+  <table>
+    <tr>
+      <td colspan="2">1</td>
+      <td>2</td>
+      <!-- <td>3</td> -->
+    </tr>
+    <tr>
+      <td rowspan="2">4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <!-- <td>7</td> -->
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>1</td>
+      <td colspan="2">2</td>
+      <!-- <td>3</td> -->
+      <td>4</td>
+    </tr>
+    <tr>
+      <td rowspan="3">5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <!-- <td>9</td> -->
+      <td>10</td>
+      <td colspan="2" rowspan="2">11</td>
+      <!-- <td>12</td> -->
+    </tr>
+    <tr>
+      <!-- <td>13</td> -->
+      <td>14</td>
+      <!-- <td>15</td> -->
+      <!-- <td>16</td> -->
+    </tr>
+  </table>
+  <!-- TODO: 나중에 완성할 것! -->
+</body>
+</html>
