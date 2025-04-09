@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- list 요소는 주로 메뉴나 탭 목록 등 목록을 만들 때 쓰임 -->
+  <!-- unordered list(블록) 순서가 필요없는 목록-->
+  <ul>
+    <!-- list item(블록) 목록 내의 각 항목 -->
+    <li>사과</li>
+    <li>딸기</li>
+    <li>수박</li>
+    <li>오렌지</li>
+  </ul>
+  <!-- ordered list(블록) 목록 내의 각 항목 -->
+  <ol>
+   <!-- list item(블록) 목록 내의 각 항목 -->
+    <li>사과</li>
+    <li>딸기</li>
+    <li>수박</li>
+    <li>오렌지</li>
+  </ol>
+  <!-- 메뉴 구조 만들기 실습 -->
+  <!-- ex) 메인 메뉴 - 서브 메뉴 -->
+  <!-- 메인 메뉴 ul 태그 안에 li태그들 여럿이 있고
+       각 리스트 중에 서브 메뉴를 만들고 싶은 li 태그 안에 ul태그를 추가함으로써
+       서브 메뉴를 만든다  -->
+  <ul>
+   <li><a href="#">메인 메뉴1</a></li>
+   <li>
+       <a href="#">메인 메뉴2</a>
+       <ul>
+         <li><a href="#">서브메뉴 2-1</a></li>
+         <li><a href="#">서브메뉴 2-2</a>
+          <ul>
+           <li><a href="#">서브메뉴 2-2_a</a></li>
+           <li><a href="#">서브메뉴 2-2_b</a></li>
+          </ul> 
+         </li>
+         <li><a href="#">서브메뉴 2-3</a></li>
+        </ul>
+      </li>
+   <li><a href="#">메인 메뉴3</a></li>
+   <li>
+    <a href="#">메인 메뉴4</a>
+    <ul>
+      <li><a href="#">서브 메뉴 4-1</a></li>
+      <li><a href="#">서브 메뉴 4-2</a></li>
+    </ul>
+   </li>
+  </ul>
+<!-- 서브 메뉴 2-2 밑에 하위메뉴 2개 더 추가 -->
+</body>
+</html>
