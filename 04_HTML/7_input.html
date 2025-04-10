@@ -165,7 +165,7 @@
  get: url에 데이터를 담아 보냄으로 보안성이 없다 보낼수 있는 데이터 양이 적다
  post: 데이터가 숨겨져서 보내지기때문에 보안성이 높다 많은 양의 데이터를 보낼 수 있다. -->
 <form action="/login" method="get">
-  
+  <!-- name 속성: 서버로 전달할 때 유니크하게 구분하기 위한 이름 -->
   <input type="text"name="id">
   <input type="password"name="pw">
   <button type="submit">로그인</button>
