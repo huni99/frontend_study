@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 복합 선택자 : 기본 선택자를 조합해서 사용하는 선택자 */
+    /* 1. 일치 선택자: 동시에 만족하는 요소를 선택 */
+    
+    /* 여러개 적용가능
+    span.orange.red.abc { 
+      color:red;
+    }
+    */
+    /* span.orange {
+      color:red;
+    } */
+
+    /* 2. 자식 선택자(자식만) :자식 요소를 선택 */
+    /*ul>.orange{
+      color:orange;
+    }*/
+    /* 3. 하위(후손 , 자손) 선택자:자식을 포함한 하위 요소 띄어쓰기가 선택자의 기호*/
+    /*div .orange{
+      color:red;
+    }
+    */
+    /* 4. 인접 형제 선택자 :"인접한 다음 형제 "요소 하나를 선택(이전 형제 선택x) */
+    /*.orange+li{
+      color:red;
+    }
+      */
+    /*
+    다음 형제가 apple이 아니므로 작동안함
+    .orange+.apple{
+      color:red;
+    }
+      */
+    /* 5. 일반 형제 선택자: 다음 형제 요소"모두"를 선택 
+          사용 빈도는 낮지만 간혹 다음 형제 요소들 중에 특정 요소를 고를 때 유용 */
+    /* .orange~li{ 
+      color:red;
+    }
+      */
+    /* 4번의 경우와 다르게 다음형제 들중 모두 선택이라 제대로 작동한다
+    .orange~.apple{
+      color:red;
+    }*/
+
+    /* tip! input, button이 반복되는 경우 그 사이를 떨어뜨릴 떄  */
+    input{ 
+      display: block;
+
+    }
+    input+input{
+      margin-top:10px;
+    }
+    input+button{
+      margin-top:10px;
+    }
+    button+button{
+      margin-left: 23px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li>사과</li>
+      <li>딸기</li>
+      <li class="orange">오렌지</li>
+      
+    </ul>
+    <div>당근</div>
+    <p>토마토</p>
+    <span class ="orange">오렌지</span>
+  </div>
+    <!-- <span class="orange red abc">오렌지</span> -->
+    <span class="orange">오렌지</span>
+    <ul>
+      <li>딸기</li>
+      <li>수박</li>
+      <li class="orange">오렌지</li>
+      <li>망고</li>
+      <li class="apple">사과</li>
+    </ul>
+  
+  <!-- tip! input, button이 반복되는 경우 그 사이를 떨어뜨릴 떄 -->
+   <input type="text">
+   <input type="text">
+   <input type="text">
+   <button type="button">버튼</button>
+   <button type="button">버튼</button>
+   <button type="button">버튼</button>
+</body>
+</html>
