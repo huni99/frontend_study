@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 스타일 상속: 해당 요소와 하위 요소까지 스타일 적용 */
+    .animal{
+      color:red;
+    
+    /* 상속이 가능한 css 속석은 대부분 글자와 관련 
+        
+        -개발자 도구에서 상속 받은 스타일 확인 가능
+        -w3shool에서 속성 검색 후 'Inherited:' 확인
+
+    */
+    }
+
+    /* 상속을 이용한 기본(공통) 스타일 작업 */
+    body{
+      font-family: 'Nanum Gothic', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.4;
+      color:green;
+
+    }
+    /* 강제 상속: 자동으로 상속되지 않는 css 속성을 강제로 상속하는 방법 */
+    .parent{
+      width: 300px;
+      height: 200px;
+      background-color: yellow;
+
+    }
+    .child{
+      width: 100px;
+      /* height: 200px; */
+      height: inherit;/* inherit를 값으로 주어 부모 값을 상속받음*/
+      /* background-color: orange; */
+      background-color: inherit; /* inherit은 어디든지 사용 가능*/
+      position:fixed ; /* position은 view port에서 fixed되어서 top right 값을주어 고정 가능*/
+      top:100px ;
+      right: 10px;
+     
+
+    }
+
+    /* (참고) 모든 css 속성과 HTML 요소에 사용가능
+        예: 버튼의 경우 font-size를 상속 받아도 버튼 기본 스타일 때문에 적용이 안됨 =>inherit로 강제 상속 */
+    button{
+      font-size: inherit;
+    }
+  </style>
+
+</head>
+<body>
+  <div class ="ecosystem">
+    생태계
+    <div class="animal">
+      동물
+      <div class="tiger">호랑이</div>
+      <div class="lion">사자</div>
+      <div class="elephant">코끼리</div>
+    </div>
+    <div class="plant">식물</div>
+  </div>
+  <br><br> 
+
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <br><br>
+  <button type="button">버튼</button>
+</body>
+</html>
