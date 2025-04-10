@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 1.(어떠한 행동을 했을 경우 동작하는) 가상 클래스 선택자 */
+    /* :hover (마우스 커서가 올라가 있는 동안 선택) */
+    a:hover{
+      color:red;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+    /* Quize : 마우스 커서가 올라가면 가로 300px.배경색 royalblue로 변경 */
+    .box:hover{
+     
+      font-size: 50px;
+      width: 300px;
+      background-color: royalblue;
+      transition: 1s; /*hover로 전환 될때 애니메이션 효과를 설정*/
+      
+    }
+    /* :active (마우스를 클릭하고 있는 동안 선택) */
+    /* 모바일에서 hover 대신에 꼼수로 사용 */
+    /* (공유) */
+    a:active{
+      color:lime;
+    }
+    .box:active{
+      width: 300px;
+      background-color: royalblue;
+    }
+    /* focus(요소가 포커스 (활성화)되면 선택) */
+    /* HTML 대화형(Interactive) 요소 사용 가능
+        tab키로 확인가능
+        예:input, a, button , label , select , textarea 등 */
+    /* 구글 검색: HTML 대화형 콘텐츠 mdn */
+    input:focus{
+      background-color: orange;
+    }
+    /* 2.(특정한 요소를 선택하는 ) 가상 클래스 선택자 */
+    /* 
+        :first-child(첫번째 자식 요소) 
+        :last-child(마지막 자식요소)
+        */
+    /*
+    .fruits span:first-child{
+      color:red;
+    }
+    */
+    /* div가 세번째 자식이라 first-child로는 선택이 안된다 */
+    /* .fruits div:first-child{
+      color:red;
+    }
+     */
+
+     /* .fruits h3:last-child{
+      color:red;
+    } */
+    /* :nth-child(n)(n번째 자식 요소) */
+    /* .fruits *:nth-child(2){
+      color: red;
+    } */
+
+    /* 짝수 지칭 */
+    /* .fruits *:nth-child(2n){
+      color: red;
+    } */
+    /* .fruits *:nth-child(even){
+      color: red;
+    } */
+
+    /* 홀수 지칭 */
+    /* .fruits *:nth-child(2n+1){
+      color: red;
+    } */
+    /* .fruits *:nth-child(odd){
+      color: red;
+    } */
+
+    /* 특정 번째 부터 전부선택     
+    .fruits *:nth-child(n+2){
+      color: red;
+    }*/
+    /* Quiz: 자식들 중 앞에 3개만 선택 */
+    /* nth-child(수식) -> 수식에 n이 먼저 나와야한다 */
+    /* .fruits *:nth-child(-n+3){
+      color: red;
+    } */
+    /*     
+    .fruits *:not(:nth-child(n+4)){
+      color:red;
+    } */
+    /* :not(s) (선택자 s를 제외) ,로 구분하여 제외할 선택자를 여러개 선택 가능 */
+    .fruits *:not(span,h3){
+      color:red;
+    }
+    </style> 
+</head>
+<body>
+  <a href="https://www.naver.com">NAVER</a>
+
+  <div class="box"></div>
+
+  <input type="text">
+  
+  <div class="fruits">
+    <span>딸기</span>
+  
+    <span>수박</span>
+    <div>오렌지</div>
+    <p>망고</p>
+    <h3>사과</h3>
+  </div>
+
+</body>
+</html>
