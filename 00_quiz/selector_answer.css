@@ -1,4 +1,9 @@
+/* 선택자는 위에서부터 내려오면서 작성하는 것이 좋음 */
+
+
 /* 1. 14 라인의 <img>태그를 선택하는 선택자를 작성 */
+
+/* header를 앞에 붙여주면 더 구체적이게 된다. 중간에 생략가능한 선택자는 생략해도 무방 */
 .logo img{border: 2px solid red;
 
 }
@@ -36,6 +41,9 @@
 /* border가 아닌 background-color로 테스트 할 것! */
 [type="text"]:focus:not([readonly]){
   background-color: red;
+  /* focus시 outline이생김 */
+  outline:  none;
+  border: 2px solid red;
 }
 
 
