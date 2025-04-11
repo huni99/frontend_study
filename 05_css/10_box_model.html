@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container-1{
+      /* width: auto;
+      height:auto; */
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+
+    }
+    span{
+      /* 가로/세로 길이 지정 안됨
+          -> 레이아웃을 작업하는 용도가 아님, 글자를 제어하는 용도 */
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      padding-right: 100px;
+    
+    }
+    .parent-1{
+      /* width: 200px;  */
+      /* max-width: 1000px; */
+      min-width: 1000px;
+      height: 200px;
+      background-color: royalblue;
+    }
+    .child-1{
+      /* max-width: 300px; */
+      /* min-width: 400px; */
+      height: 100px;
+      background-color: orange;
+    }
+    .parent-2{
+      width: 300px;
+      height: 200px;
+      background-color: royalblue;
+
+    }
+    html{
+      font-size: 20px;
+      /* root만 바꿔주면 rem을 쓴 곳은 한번에 다 바뀜 */
+    }
+    .child-2{
+      width: 100px;
+      /* width: 50%; %단위는 대부분 부모기준으로 %을 가진다 */
+      /* width: 10em; em: 자기 자신의 글꼴 크기를 기준으로 상대적인 단위 이다 기본적으로는 html 기본 크기를 상속 받는상태 */
+      /* font-size: 10px; */
+      /* width: 10rem; 최상위 요소(html)의 글꼴 크기에따라 변경된다 */
+      /* width: 50vw; */
+      
+      /* height: 100px; */
+      height: 100px;
+      background-color: orange;
+    }
+    .container-2 .item{
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border: 10px solid red; /* 선-두께 선-종류 선-색상 3개 적용가능 순서는 안지켜도 되지만 관례상 이 순서대로 적는다*/
+
+    }
+    .container-2 .item:first-child{
+      /* margin: -50px; */
+      /* 일반적인 경우 음수는 잘 사용 안함(간혹 요소를 배치 시 사용함) */
+      /* margin: 10px;  전 방향으로*/
+      /* margin:10px 20px;  상하 좌우 */
+      /* margin: 10px 20px 30px; 값이 3개일 경우는 top부터 상(top) 중(left,right) 하(bottom)  */
+      /* margin: 10px 20px 30px 40px; 값이 4개일 경우 top부터 시계방향으로 top right bottom left 순서대로 변경*/
+      /* margin-bottom: 10px; 이런식으로 방향을 지정해서 한군데만 적용 가능 */
+      
+      
+      /* Tip! "가로 길이를 갖는" 블록 요소의 수평 가운데 정렬
+              가로길이가 없으면 동작을 안함 */
+      margin: 0 auto;
+      
+      
+    }
+    .container-2 .item:nth-child(2){
+      /* 내부 여백 지정시 요소의 크기가 커진다 */
+      /* 즉, width, height는 콘텐츠의 크기를 의미*/
+      /* margin : 20px; */
+      /* padding: 10px; */
+      /* padding: 10px 20px; */
+      /* padding: 10px 20px 30px; */
+      /* padding: 10px 20px 30px 40px; */
+      /* padding-left: 20px */
+      
+
+      
+    }
+    .container-3 .item{
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+    .container-3 .item:first-child{
+      /* 실선 */
+      /* box 모델에서 우리 눈에 보이는 영역은 border 까지이다 
+      padding과 마찬가지로 
+      border를 많이 넣을수록 요소가 커보인다 */
+
+      /* border : 10px solid ; */
+      color:blue;
+      /* 지정된 색상 값이 없으면 요소의 글꼴 색상이 적용 */
+      border: 10px solid gray;
+    }
+
+    .container-3 .item:nth-child(2){
+      /*파선  */
+      /* border: 10px dashed red; */
+      /* border: 10px dashed #ff0000; */
+      border: 10px dashed #f00;
+      /* 두개가 동일하게 반복될때 축약가능 */
+
+    }
+    .container-3 .item:nth-child(3){
+      /*점선  */
+      /* border: 10px dotted blue; */
+      /* border: 10px dotted #0000ff; */
+      border: 10px dotted rgb(0,0,255);
+      /* border: 10px dotted rgba(0,0,255,0.5); 투명도 까지 추가 0~1 사이 */ 
+
+
+
+    }
+    .container-4{
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+      margin: 100px 0 100px 100px;
+    
+      /* border-radius: 20px; */
+      /* border-radius: 0 20px; */
+      /* border-radius: 0 20px 40px; */
+      /* border-radius: 0 20px 40px 60px; */
+
+      /* Tip! 원만들기 */
+      /* 요소의 길이가 바뀌면 같이 수정해야하는 문제  */
+      /* border-radius: 50px; */
+      /* Quiz: 상대 단위를 쓰면 해결 */
+      border-radius: 50%;
+    }
+    .container-5 {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+    .container-5.compare{
+    /*border로 인해 요소의 크기가 10px 증가  */
+    border: 5px solid red;
+    /*padding으로 인해 요소의 크기가 40px 증가 */
+    padding:20px;
+
+    /* 
+    요소의 크기가150 x 150 으로 늘어남
+    만약 요소의 크기를 100px로 유지하고 싶다면 늘어난 50px만큼 빼줘야함
+     */
+
+    /* 가로 세로 계산에 padding과 border 값도 포함해서 자동으로 content 영역이 줄어든다 */
+    /* 요소에 padding과 border 값이 추가될 때 지정한 크기보다 커지는 것을 방지 */
+    box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h4>1-1. width, height 실습</h4>
+  <div class=" container-1">hello</div>
+  <span>hello</span>
+
+  <hr>
+  <h4>1-2. max-, min- 실습</h4>
+  <div class="parent-1">
+    <div class="child-1"></div>
+  </div>
+  <!-- 
+    자주 사용하는 CSS 단위(*많이 사용)
+
+    1. px(픽셀)*: 
+      디바이스가 표현할 수 있는 화면의 점
+      1920 x 1080 해상도에서 1920, 1080 숫자들이 가로, 세로에 들어가는 픽셀의 수를 의미
+    2. %(상대적 백분율)*:
+      특정 값을 기준으로 몇 퍼센트의 크기를 가지는지 표현하는 상대 단위
+    3. em(요소의 글꼴 크기):
+      요소 자신의 글꼴 크기를 기준으로 하는 상대 단위
+      예를 들어 요소의 글꼴 크기가 10px이면 1em은 10px을 의미
+    4. rem(root-em, 루트 요소의 글꼴 크기):
+      루트(최상위) 요소(html)의 글꼴 크기를 기준으로 하는 상대 단위
+      루트의 글꼴 크기 기본값은 16px이므로 1rem은 16px을 의미
+    5. vw(뷰포트의 가로 너비의 백분율):
+      예를 들어 뷰포트의 가로가 1920px인 경우 10vw는 192px
+      브라우저 창 크기 조절 시 상대적으로 바뀜
+    6. vh(뷰포트의 세로 높이의 백분율):
+      예를 들어 뷰포트의 세로가 1080px인 경우 10vh는 108px 
+      브라우저 창 크기 조절 시 상대적으로 바뀜
+
+    *(참고) 뷰포트의 크기는 스크롤까지 포함임
+  -->
+    <h4>CSS 단위 실습</h4>
+    <div class="parent-2">
+      <div class="child-2"></div>
+    </div>
+    <h4>2. margin, padding 실습</h4>
+    <div class="container-2">
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <h4>3. border 실습</h4>
+    <div class="container-3">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <h4>4. border-radius 실습</h4>
+    <div class="container-4"></div>
+
+    <h4>5. box-sizing 실습</h4>
+    <div class="container-5 compare" >hello</div>
+    <div class="container-5">hello</div>
+</body>
+</html>
