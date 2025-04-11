@@ -1,0 +1,61 @@
+<!-- (정리) Quiz
+  Q1: width와 height 속성의 역할은?
+  A1: 가로 , 세로
+
+  Q2: width와 height 속성의 기본값은?
+  A2: auto(브롥요소와 인라인 요소에따라 auto값의 특성이 달라진다는 것이 중요) 
+  브라우저에 따라 다르다
+
+  Q3: max-width와 max-height 속성의 기본값은?
+  A3: none (최대 값 제한x)
+
+  Q4: min-width와 min-height 속성의 기본값은?
+  A4: 0 (최소값 제한 x)
+
+  Q5: em 단위의 기준은?
+  A5: 해당 요소의 글꼴 크기의 배수이다
+
+  Q6: 0px과 0vw 중 더 큰 값은?
+  A6: 둘다 같은 값(0em, 0rem,0px, 0vw 모두 0이므로 0에는 단위를 붙이지 않아도 된다)
+
+  Q7: margin 속성의 역할은?
+  A7: border 바깥쪽 여백
+
+  Q8: margin: 40px 30px 20px;
+      위 코드에서 30px은 어느 방향을 의미하는가?
+  A8: 좌우 
+
+  Q9: margin: 20px 10px;
+      위 코드에서 20px은 어느 방향을 의미하는가?
+  A9: 상하
+
+  Q10: padding 속성의 역할은?
+  A10: border 안쪽부터 content 영역 까지의 여백
+
+  Q11: padding: 20px 10px 40px 30px;
+      위 코드에서 30px은 어느 방향을 의미하는가?
+  A11: left
+  
+  Q12: padding 속성의 특징은?
+  A12: 클수록 요소가 커짐
+
+  Q13: border 속성의 특징은?
+  A13: ''
+
+  Q14: 두께 2px, 종류 실선, 색상 빨강의 테두리 선을 코드로 작성하시오!
+  A14: border: 2px solid red;
+
+  Q15: 요소의 모서리를 둥글게 깎기 위한 속성은?
+  A15: border-radius
+
+  Q16: width: 100px; padding: 20px; border: 1px solid red;
+      위 코드가 지정된 요소의 실제 가로 너비는?
+  A16: 142px
+
+  Q17: width: 100px; padding: 20px; border: 1px solid red; box-sizing: border-box;
+      위 코드가 지정된 요소의 실제 가로 너비는?
+  A17: 100px
+
+  Q18: box-sizing 속성의 기본값은?
+  A18: content-box
+-->
