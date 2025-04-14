@@ -1,0 +1,45 @@
+.profile img{
+  /* (참고) img는 인라인 요소이지만 인라인-블록처럼 동작 */
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  /* 요소를 원으로 만들기 */
+  border-radius: 50%;
+  /* 이미지 가운데 정렬(2가지) */
+  /* 1)부모에 text-align:center; */
+  /* 2)가로 길이를 갖는 블록 요소에 margin: 0 auto; */
+  display: block;
+  margin: 0 auto;
+
+}
+.title{margin-bottom: 30px;
+
+}
+.content{
+  font-size: 20px;
+  margin-bottom: 30px;
+
+}
+.box{background-color: cornflowerblue;
+    white-space: pre;
+    width:450px;
+    height: 90px;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 5px 5px  #000 ;
+    color: #ffffff;
+
+    
+
+}
+p span{
+  color: red;
+  font-weight:bold;
+}
+body{
+    
+    text-align: center;
+
+}
