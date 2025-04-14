@@ -1,0 +1,53 @@
+.main-background{
+  padding-top: 100px;
+  text-align: center;
+  background-image:url("./images/shoes.jpg") ;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0;
+
+  
+}
+.main-title{
+  margin-top: 0;
+  font-size: 50px;
+  color:white;
+}
+.main-content{
+  color:white;
+}
+.main-button{
+  margin: 50px;
+  background-color: white;
+  padding: 20px 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  border-color: transparent;
+}
+.main-button:hover{
+  background-color:rgba(255,255,255,0.3);
+}
+.sub-description{
+  margin: 0 auto;
+  background-color: #fff;
+  max-width: 700px;
+  width: 80%;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 600px;
+}
+.history{
+  
+  padding-top: 100px;
+  margin: 0;
+  text-align: center;
+  background-color: gray;
+}
+.history>h4{
+  margin:0;
+}
