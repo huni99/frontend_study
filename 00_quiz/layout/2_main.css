@@ -72,7 +72,21 @@
   background-color: gray;
 }
 .history>h4{
-  
 
   margin-top: 100px;
+}
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.menu{
+  list-style-type: none;
+}
+
+.menu-item{
+  margin:10px;
+  display: inline-block;
+  
+
 }
