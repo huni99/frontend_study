@@ -75,18 +75,34 @@
 
   margin-top: 100px;
 }
+/*  주석 부분이 공백으로 띄우는 2번째 방법 */
 .nav-container{
   display: flex;
   justify-content: space-between;
- 
+  align-items: center;
+  padding: 10px;
+  height: 40px;
 }
 .menu{
+  display:flex;
   list-style-type: none;
+  /* column-gap: 10px; */ /* gap을 이용한 메뉴 항목사이에 간격*/
 }
 
 .menu-item{
-  margin:10px;
   display: inline-block;
   
-
 }
+/* 메뉴 항목 사이에 간격을 넣는 방법2가지
+    1)margin
+    2)gap(in flexbox)
+     */
+/* .menu-item+.menu-item{
+  margin-left:10px;
+} */
+
+
+
+/* .blank{
+  flex:1;
+} */
