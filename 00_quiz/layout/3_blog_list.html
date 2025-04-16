@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./3_main.css">
+</head>
+<body>
+  <!-- Tip! 레이아웃을 만드는 기본 
+    뭘 만들든 레잉아웃은 항상 수평(행)으로 자른 후 박스 부터 만들고 시작하면 됨
+    그리고 이 박스들을 전부 div로 구현해 놓으면 됨(물론 시맨틱 태그도 최대한 활용)
+    그리고 이안에 글 넣고 그림 넣고 하면 끝!
+
+    이 때 div는 블록 요소이기 때문에 위아래로 배치
+    좌우로 나란히 배치하고 싶으면 float(😡), inline-block(😐),flexbox(😊😊)
+  
+  -->
+    <!-- navbar -->
+    <nav>
+      <ul class="navbar">
+        <li class="menu_item">
+          <a href="#">영화</a>
+        </li>
+        <li class="menu_item">
+          <a href="#">맛집</a>
+        </li>
+        <li class="menu_item">
+          <a href="#">IT</a>
+        </li>
+        <li class="menu_item">
+          <a href="#">컴퓨터</a>
+        </li>
+  
+      </ul>
+    </nav>
+    <!-- blog list item -->
+    <div class="container">
+      <div class="blog-list-item">
+      <div class="blog-content">
+        <div class="content-h">
+          <!-- 프로필 이미지 -->
+          <img class="p-img"src="https://picsum.photos/400/300" alt="profil-img">
+          <div class="blog_name">
+            <div>정길훈</div>
+            <div>2분 전</div>
+          </div>
+
+          <!-- 작성자, 시간 -->
+        
+        </div>
+     
+        <div class="content-b">
+          <!-- 글 제목, 글 내용 -->
+          <h4>natus aut amet quod officiis</h4>
+          <div>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum veniam saepe quis sunt architecto perferendis nulla nostrum, natus aut amet quod officiis. Laudantium sed iusto corrupti illo. Dolores, fuga possimus.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum veniam saepe quis sunt architecto perferendis nulla nostrum, natus aut amet quod officiis. Laudantium sed iusto corrupti illo. Dolores, fuga possimus.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum veniam saepe quis sunt architecto perferendis nulla nostrum, natus aut amet quod officiis. Laudantium sed iusto corrupti illo. Dolores, fuga possimus.
+        </div>
+        </div>
+      </div>
+      <div class="blog-img">
+        <img src="https://picsum.photos/250/300" alt="blog-img">
+      </div>
+    
+      </div>
+      
+    </div>
+
+  
+</body>
+</html>
