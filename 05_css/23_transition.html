@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      /* 전상태 */
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      background-image: url(./images/logo.png);  
+      background-size: 100px ;
+      background-repeat: no-repeat;
+    }
+    .test{
+      /* 전환 효과를 1초 동안 추가 */
+      /* transition: .1s; */
+      /* width값에만 전환 효과 추가 */
+      /* transition: width 1s; */
+      /* transition: background-color 1s; */
+      /* 지속 시간을 더 짧게 지정 = 더 빠른 전환 효과 */
+      /* transition:width 0.1s; */
+      /* 전환 효과 여러 개 설정하기 */
+      /* transition:width 0.1s, background-color 2s; */
+      /* 대기 시간 지정 두번 째 시간은 대기 시간을 의미*/
+      transition: 1s 2s;
+
+
+
+    }
+    .test:active{
+      width: 300px;
+      /* height: 300px; */
+      background-color: royalblue;
+    }
+    div+div{margin-top:20px}
+/* **************************************************************************** */
+
+    .transition-1{ 
+    transition: 2s;/*요소에 넣으면 hover가 풀려도 작동*/
+    }
+    .transition-1:hover{  /* hover에다 transition을 넣으면 hover가 풀리면 바로 적용이 안됨*/
+    background-size: 300px;
+    width: 300px;
+    height: 300px;
+  
+    /* transition:width 2s, height 4s linear 2s; */
+    }
+
+
+    .transition-2{
+      /* transition:width 1s ease-in; */
+      transition: width cubic-bezier(0,-0.99,1,-0.99) 3s 1s;
+
+    }
+    .transition-2:hover{
+      width:600px;
+      background-size:cover;
+
+    }
+    .transition-3{ 
+      position: relative;
+      left: 0;
+      transition: left 1s;
+    
+
+    }
+    .transition-3:active{ 
+    left:300px;
+
+    }
+  </style>
+</head>
+<body>
+  <h1>transition(전환 효과)</h1>
+  <h2>요소의 전, 후 상태의 중간 단계를 자연스럽게 만들어주는 효과</h2>
+  <div class="test"></div>
+  <hr>
+  <div class="transition-1"></div>
+  <div class="transition-2"></div>
+  <div class="transition-3"></div>
+</body>
+</html>
