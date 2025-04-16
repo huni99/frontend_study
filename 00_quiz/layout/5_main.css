@@ -1,0 +1,88 @@
+
+*{/*공통 스타일*/
+  box-sizing: border-box;
+
+}
+.cart-background{
+  background-color: #a2b7ee;
+  display: flex;
+
+
+}
+.inner{  
+  max-width:700px ;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+
+}
+.cart-list{
+  background-color: white;
+  
+  
+}
+
+table{
+  
+  text-align: center;
+  border-radius: 15px;
+  border-collapse: collapse;
+
+}
+
+td,th{
+  border-bottom:2px solid #a2b7ee;
+  padding-right:20px;
+  height: 80px;
+}
+
+
+td img{
+  width: 100px;
+  height: 50px;
+  vertical-align: middle;
+  margin: 20px;
+  object-fit: contain;
+}
+/* .item{
+  width: 500px;
+} */
+.cart-list tr:nth-child(1) > th:first-child{
+  width: 500px;
+}
+.cart-list tr:nth-child(2) > td:first-child{
+  text-align: start;
+}
+.cart-list tr:nth-child(3) > td:first-child{
+  text-align: start;
+}
+.cart-list tr:nth-child(4) > td:first-child{
+  text-align: end;
+ 
+  
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+}
+.text-box{
+  display: flex;
+  align-items: center;
+}
+
+
+.button{
+  color:white;
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 0 ;
+  cursor: pointer;
+  transition: 1s;
+
+}
+.button:hover{
+  background-color: green;
+}
