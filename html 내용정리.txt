@@ -1,0 +1,147 @@
+1) 인란인 요소
+ - 태그는 상하 여백이 불가하고 좌우 여백만 가능
+ - 글자를 다루기 위한 요소 width height 지정 불가 margin padding 좌우로만 가능
+    지정하고 싶으면 display로 block으로 바꿔주면 됨
+ - 인라인 안에 블록 요소 불가
+
+예외) img 태그는 인라인이지만 width height 지정가능
+
+2) 블록요소
+ - 상자를 다루기 위한 요소
+ - 수평은 부모의 요소 크기만큼 , 수직은 컨텐츠 크기 만큼 자동 설정
+
+3) 미디어 조작
+ - 태그에 controls를 넣어 줘야 영상이든 음성이든 컨트롤 하는 컨텐츠가 나온다
+ - 브라우저 마다 지원하는 확장자가 다르므로 source 태그로 여러 확장자를 넣어줘야한다
+ -오디오,비디오
+ 
+  속성 controls , muted , loop, autoplay
+    ex) <audio controls  muted  loop autoplay>
+    <source src="./Kalimba.mp3" type="audio/mpeg" >
+    <source src="./Kalimba.ogg" type="audio/ogg">
+   </audio>
+
+   비디오는 width height 지정가능 
+   
+4) 리스트
+ - ul태그 안에 li태그들로 리스트를 만듦
+ - a 태그의 속성 값으로 _blank를 하여 링크된 탭이 새로운 탭에서 나오도록 함
+
+
+ /* 스크롤 이동을 부드럽게 만들어주는 코드 */
+    scroll-behavior: smooth ;
+
+5)input
+ - 인라인-블록이다.
+
+label 바인딩 방법 두가지
+1. <label> <input type="text"> </label>
+2. <label for="text-id">아무거나 내용 입력</label>
+   <input type="text" id="text-id">
+
+ - type : text
+   속성 - value:미리 글자를을 넣어둠 ex)<input type="text" value="미리지정값">
+          - placeholder: 흐린 글씨로 글자를 넣어둠 <input type="text" placeholder="값을 입력하시오">
+          - disabled : 비활성화로 수정 불가,   선택 불가, submit 불가
+          - readonly : 읽기전용으로  수정불가 ,선택 가능, submit 가능
+                  
+ -type : checkbox
+  속성 - checked: 기본 값이 체크
+
+ - type: radio 
+ 속성 checkd :기본값이 체크
+	 name  : 그룹화 하기 위함 
+ 	 ex) <label>
+  		<input type="radio" name="fruit" checked> Apple
+	      </label>
+	      <label>
+  		<input type="radio" name="fruit"> Banana
+	      </label>
+		name이 fruit인 라디오들이 그룹화 되어서 그중 하나만 선택 가능하게 된다
+
+-<textarea>태그
+ 사용법
+ <textarea type="text" id="multi" cols="30" rows="6" style="resize=none;"></textarea>
+
+6) table 구조 
+ table 은 thead , tbody tfoot 으로 나누어서 내용 입력가능
+ <table>
+ 	 <thead>
+ 		<tr>
+ 			<th></th><th></th><th></th>
+		<tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td></td><td></td><td></td><td></td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td><td></td><td></td><td></td>
+		</tr>
+	</tfoot>
+</table>
+
+이런식의 구조를 가진다
+<tr>은 row로 열을 나타내고 그 안에 헤더는 <th> 내용은<td>로 일반적으로 표시 /전부 <td>로 해도 상관없다
+
+border-collapse: separate;  = 테이블의 보더 간격을 분리합니다. 기본값으로 적용 (각 셀의 보더들간의 간격이 있다)
+border-collapse: collapse; = 테이블의 보더 간격을 합칩니다. 각 셀간의 간격이 없어짐
+
+table 에서 각 셀들은 td,th로 스타일 지정을 한다 tr은 스타일에 영향이 없음
+
+셀병합 - 
+	colspan="2" 좌우 2칸이 병합됨 (1열 2열)
+	rowspan="3" 상하 3칸이 병합됨 (1,2,3행) 
+
+7) 속성
+
+<img src="https://picsum.photos/300/200" alt="샘플">
+<a href="https://www.naver.com" target="_blank" title="네이버로 이동">naver</a>
+
+ - class ( 중복적용이가능하다 )
+<span class="content first">안녕</span>        이렇게 여러개 의 클래스 동시 지정 가능
+<span class="content second">하세요</span>
+<span class="content first">!!!</span> 
+
+    .content{ 
+      color: red;   -> content라는 클래스 전부 red로 색상 변환하므로 '안녕 하세요 !!!' 전부 빨간색이된다
+    }
+ .content.first{
+      color:blue;  -> content이면서 first인 요소 이므로 '안녕 과  !!!'이 파란색이 된다
+    }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
