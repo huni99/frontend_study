@@ -1,0 +1,112 @@
+/* 단방향 애니메이션을 만드는 step 
+  1. 시작 스타일 만들기(before)
+  2. 최종 스타일 만들기(after)
+  3. 언제, 어떻게 했을때 변하는지 정의(예: 마우스를 올렸을 때)
+    ->css 만으로는 hover가 최대임, js를 배우면 클릭 시 ,드래그 시, 키입력 시 등 전부 활용 가능
+  4.transition 적용
+*/
+
+.shop-background{
+  background-color: #eee;
+  padding: 20px;
+
+  
+}
+.shop-container{
+  width: 90%;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-item{
+  margin:10px;
+  width: 33%;
+  position: relative;
+  overflow: hidden;
+  /* 화면 배치상 밖에 있는 부분을 없애버린다 */
+
+
+}
+.shop-item img{
+  width: 100%;
+  display: block;
+  
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  color:white;
+  background-color: #000;
+  opacity: 0;
+
+  position: absolute;
+  /* 화면 전체 영역 덮기(예: 모달창 백그라운드, 영상 덮개) */
+  /* position:fixed;
+  top: 0;
+  left: 0; 
+  z-index:99;
+  */
+  top:0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 1s;
+
+  
+}
+.overlay:hover{
+  /* 백그라운드랑 content랑 명암 분리 */
+  background-color: rgba(0,0,0,0.6);
+  opacity: 1;
+}
+.overlay_out{
+  width: 100%;
+  height: 50%;
+  color:white;
+  background-color: rgba(0,0,0,0);
+  transition:1s;
+  position: absolute;
+  top:100%;
+}
+
+.shop-item:hover .overlay_out{
+  width: 100%;
+  height: 50%;
+  color:white;
+  background-color: rgba(0,0,0,0.6);
+
+  position: absolute;
+  top:50%;
+}
+
+.button_box{
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  padding: 14px 30px;
+  margin:10px;
+  font-size: 20px;;
+  outline: none;
+  border:2px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  width: 150px;
+}
+.btn:hover{
+  color:#ff0;
+
+}
+
+
+
+
+.shop-item:hover {
+
+  opacity: 1;
+
+}
