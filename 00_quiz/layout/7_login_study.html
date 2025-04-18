@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    .form-input{
+      width: 100%;
+      outline:none;
+      border: none;
+      cursor: pointer;
+
+    }
+    .btn{
+      width: 100%;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+
+    }
+    .btn-login{
+      
+      background-color: #09aa5c;
+      margin-top: 40px;
+    }
+    .btn-join{
+      background-color: white;
+      border:1px solid #09aa5c ;
+      color: #09aa5c;
+      margin-top: 10px;
+    }
+    .login-container{
+      width: 460px;
+      border: 1px solid #e1e3e5;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .login-background
+    {
+      /* 뷰포트의 높이만큼 가득 채우려면 vh단위를 사용 
+      %는 부모의 요소크기만큼의 백분율이다 */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  
+    .id-box, .pw-box{
+      height: 60px;
+      padding: 27px 15px 8px;
+      border: 1px solid #c5ccd2;
+      position: relative;
+    }
+    .id-box{
+      border-radius: 8px 8px 0 0;
+    }
+    .pw-box{
+      border-top:0;
+      border-radius: 0 0 8px 8px;
+    }
+    .login-container .text-label{
+      position:absolute;
+      bottom:15px;
+      left: 15px;
+      opacity: .5;
+      transition: .5s;
+    }
+    .icon-eye{
+      position: absolute;
+      right: 15px;
+      top:18px;
+      opacity: 0.8;
+      cursor: pointer;
+
+    }
+    .form-input:focus + .text-label{
+      font-size: 12px;
+      bottom: 30px;
+      
+    }
+    /* TODO 자바스크립 배우고 input태그 focus시 바깥 div border 색상 바꾸기  */
+    
+
+  </style>
+</head>
+<body>
+  <div class="login-background">
+    <div class="login-container">
+      <div class="id-box">
+        <input type="text" id="id" class="form-input">
+        <label for="id" class="text-label">아이디 또는 전화번호</label>
+
+
+      </div>
+      <div class="pw-box">
+        <input type="text" id="pw" class="form-input">
+        <label for="pw" class="text-label">비밀번호</label>
+        <span class="material-symbols-outlined icon-eye">visibility</span>
+
+      </div>
+      <button type="button" class="btn btn-login">로그인</button>
+      <button type="button" class="btn btn-join">회원가입</button>
+    </div>
+  </div>
+  
+</body>
+</html>
