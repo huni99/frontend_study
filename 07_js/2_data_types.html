@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 데이터 타입(자료형)
+
+    // String(문자 데이터)
+    // 큰따옴표(""), 작은따옴표(''),백틱(``)
+    let  a = { ap: 'apple'
+              ,q:'dd'
+              ,d:'w'
+    };
+    const myName="GONI";
+    const email='geoblo@naver.com';
+    const hello = `hello`+'emaidl'+2+`백틱${45+23+'answk'}사용`;
+
+    console.log(hello);
+    console.log(a.ap);
+    console.log(a["q"]);
+
+    //Nuber(숫자데이터)
+    // 정수 및 부동소수점(실수) 숫자를 나타냄
+    const number = 1.123;
+    Number =1223;
+    console.log(number);
+    
+    console.log(Number);
+
+    // Boolean(논리 데이터);
+    // true(참),false(거짓) 두 가지 값만 존재
+    // 이분법적으로 구분해야 하는 상황에서 사용=>조건문 반복문에서 조건을 판단할 때
+    const checked = true;
+    const isShow= false;
+
+    //조건식
+
+    const numX=5;
+    const numY=5;
+    const numZ=6;
+    // ==는 숫자 5와 문자5 즉 타입은 비교하지 않고 값이 같으면 true가 나온다 ===은 값과 타입을 전부 비교하므로 ===이 더 엄격하다 ex> 5와 '5'를 비교했을 때 ==는 true ===는 false가 나온다
+    console.log(numX===numY);
+    console.log(numX===numY);
+    
+
+    // undefined
+    // 아무것도 정의되지 않은(값이 할당되지 않은) 상태를 의미
+    // 변수의 초기화를 하지 않으면 자동으로 undefiend가 할당
+    // (초기화: 변수를 선언하고처음으로 값을 저장하는것)
+    let undef;
+    console.log(undef);
+
+    const obj = {
+      abc:123,
+      efg:456
+    };
+    console.log(obj['efg']);
+    console.log(obj.abc);
+    console.log(obj.xyz); //undefined가 뜨게된다
+
+    //null
+    // 어떤 값이 의도적으로 비어있음을 의미
+    // undefined와 다른 점은 개발자가 명시적으로 값이 비어있음을 나타낼 때 사용
+    
+    let name=null;
+    console.log(name);
+
+    name='goni kim';
+    console.log(name);
+
+    // Object(객체 데이터)
+    // 관련 있는 여러 데이터를 key-value 1쌍의 형태로 저장
+    // { }방식을 주로 사용
+    const user={
+      // 속성(property)
+      name:'gonikim',//문자
+      age:33,
+      isMarried:false//
+
+    };
+    console.log(user.age);
+    console.log(user['name']);
+    console.log(user.isMarried);
+
+    // Object 안에 함수 넣기
+    const nameObj = {
+      first : function(parmas){
+        console.log(`${parmas} nice to meet you!`)
+      }
+    };
+      console.log(nameObj.first("길훈"));
+      
+    
+
+    
+
+    //Array(배열 데이터)
+    // 여러 데이터를 순차적으로 저장
+    // [] 방식을 주로 사용
+    // 배열의 인덱스는 0부터 시작한다
+    const fruits=['apple','banan','cherry',user,4,'1234'];
+    console.log(fruits[3].age);
+
+    // (참고) 다른 종류의 데이터를 포함시킬 수동 있지만, 대부분 같은 종류의 데이터를 나열
+    
+     // (활용 예) 상품 리스트, 사용자 리스트
+     const productList = [
+      {
+        productId: 1,
+        productName: '고려은단 비타민C',
+        price: 32900,
+        productImg: 'https://이미지경로',
+        brand: '고려은단'
+      }, 
+      {
+        productId: 2,
+        productName: '콘드로이친1200',
+        price: 285000,
+        productImg: 'https://이미지경로',
+        brand: '관절엔'
+      }, 
+      {
+        productId: 3,
+        productName: '에버콜라겐C',
+        price: 210000,
+        productImg: 'https://이미지경로',
+        brand: '뉴트리'
+      }
+    ];
+    
+    console.log(productList[0].brand);
+
+    const userList = [
+      {
+        userId: 'geoblo',
+        name: '김재현',
+        age: 99,
+        email: 'geoblo@naver.com',
+        hobby: ['배드민턴', '싸이클', '스노우보드', '스쿼시', '탁구', '스쿠버 다이빙']
+      },
+      {
+        userId: 'javakim',
+        name: '김자바',
+        age: 10,
+        email: 'jsjs@gmail.com',
+        hobby: ['멍때리기']
+      }
+    ];
+    console.log(userList[0].hobby[2]);
+    
+    //(참고) js는 매우 유연한 언어
+    // 변수에 여러 데이터 타입을 넣을 수 있고 값을 넣는 순간에 타입이 결정됨
+    // 자바 스크립트는동적 타입 언어  자바는 정적 타입언어이다
+    let e=1;
+    console.log(typeof e);
+    // typeof 변수의 데이터 타입을 확인
+
+    e='1';
+    console.log(typeof e);
+
+    // (참고) false로 취급되는 값(falsy): false ,0 , ''(빈문자) , 'null',undefined ,NaN(Not a Number 의 줄임말)
+    
+    function returnf(){
+      return '안녕하세요';
+
+    }
+    
+    console.log(returnf());
+    
+    
+    
+    
+
+    
+  </script>
+</body>
+</html>
