@@ -6,18 +6,25 @@
   cursor: pointer;
 
 }
-.material-symbols-outlined:active{
-  
-}
+
 .back-g{
-  background-color: rgba(128, 128, 128, 0.295);
+  background-image: url(./images/shoes.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:700px;
+  padding-top:1px;
 }
 .container{
+  
+  border: black 2px solid;
   border-radius: 20px;
-  background-color: rgb(99, 67, 67);
+  background-color: rgba(255,255,255,0.5);
+  
+  
   width: 80%;
   max-width: 300px;
-  margin: 0 auto;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,5 +65,9 @@
   box-shadow: 3px 3px black;
   color: white;
   background-color: chocolate;
+  cursor: pointer;
 }
-
+.btn-box button:hover{
+  background-color:
+  red;
+}
