@@ -97,9 +97,15 @@
     // js에서 함수는 그 자체가 하나의 값이라 함수를 호출할 때 인자값으로 사용 가능=>콜백 함수라 부름
     document.body.addEventListener('click',handler);
     // 총 3번 재사용
-
+    let ce;
     // 함수를 재사용 할 필요가 없으면(1회성)굳이 이름 붙이지 않고 익명 함수 사용
-    document.body.addEventListener('click',function (){console.log('1회성 함수!!!!')});
+    document.body.addEventListener('click', ce=function(){console.log('1회성 함수!!!!') ;
+    return 3;});
+    console.log(ce());
+    ce();
+    // 위와 같은 방법으로 전역 변수를 할당하고 객체 파라미터로 함수를 선언하면서 값을 저장하면 그 지역을 빠져나와도 값이 저장되어있다. ce();를 하면 함수 호출 console.log(ce());를 하면 ce()의 반환값을 출력
+
+    
     // 보통 이벤드 핸들러를 익명함수로 만듬
     // 메소드에 대해
     // 객체에 저장하는 데이터가 함수인 경우, 그 속성을 메소드라고 부름
