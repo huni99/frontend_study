@@ -1,0 +1,58 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+*{
+  box-sizing: border-box;
+}
+.menu_icon{
+  font-size: 60px;
+
+}
+
+.menu {
+  
+  cursor: pointer;
+
+  width: 100%;
+  padding :10px 30px;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu ul{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: bold;
+  color:#000;
+  font-size: 30px;
+  top:-30px;
+  left:30%;
+  opacity:0;
+  transition:.5s;
+}
+/* 각 메뉴 선택시 색상이 바뀌면서 아래 화면에 출력 */
+.menu ul.clicked{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: bold;
+  color:#000;
+  font-size: 30px;
+  top:20px;
+  left:30%;
+  opacity: 1;
+}  
+
+.menu ul li{
+  white-space: nowrap;
+  padding-left: 30px;
+}
