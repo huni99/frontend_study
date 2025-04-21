@@ -126,8 +126,20 @@
 <hr>
 
 <!-- 범위 선택(기본값 :0~100) -->
- <label for="volume">음량 0~10</label>
- <input type="range" id="volume" min="0" max="10" step="2">
+ <label for="volume">음량 0~50</label>
+ <input type="range" id="volume" min="0" max="50" step="2" value="1">
+ <span id="volumeValue"></span>
+ <script>
+  const volumeEl = document.getElementById('volume');
+  const spanEl= document.getElementById('volumeValue');
+  spanEl.textContent=volumeEl.value;
+  volumeEl.addEventListener('input', function
+    (){
+     
+        spanEl.textContent=volumeEl.value;
+  });
+ </script>
+ <hr>
 <!-- 비밀번호  -->
  <label for="password">비밀번호</label>
  <input type="password"id="password" maxlength="10">
@@ -147,9 +159,9 @@
  </select>
  <hr>
  <!-- 여러 줄 입력 
-       textarea 태그를 통해 여러줄 입력 박스를 만듦 
-       cols , rows로 행렬 줄수 정함
-       spellchek 를 통해 의미없는 영어 체크를 안할수있음-->
+      textarea 태그를 통해 여러줄 입력 박스를 만듦 
+      cols , rows로 행렬 줄수 정함
+      spellchek 를 통해 의미없는 영어 체크를 안할수있음-->
  <p>
   <label for="multi">여러줄 텍스트</label>
 </p>
