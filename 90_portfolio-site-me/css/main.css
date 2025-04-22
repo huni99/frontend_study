@@ -6,6 +6,9 @@
   'GRAD' 0,
   'opsz' 24
 }
+img {
+  display: block;
+}
 *{
   box-sizing: border-box;
 }
@@ -23,9 +26,14 @@ a{
   color: #000;
   text-decoration: none;
 }
-.align{
-  width: 80%;
+.container{
+  width: 1200px;
   margin: 0 auto;
+}
+div h2{
+  font-size: 60px;
+  border: bold;
+  color: #425a73;
 }
 .menu_icon{
   font-size: 60px;
@@ -85,11 +93,14 @@ a{
   width: 100%;
   bottom: -10px;
 }
-.container-2{
+#home{
+  /* 나중에 home 백그라운드 이미지 삽입 */
   background-color: #bbdcfb;
   height: 100vh;
+}
+.container-2{
+  height: 100%;
   position: relative;
-  
 }
 .container-2 p:first-child{
   position: absolute;
@@ -99,3 +110,44 @@ a{
   font-size: 30px;
   font-weight: 200;
 }
+.container-2 p:nth-child(2){
+  position: absolute;
+  left: 30px;
+  top: 150px;
+  
+  font-size: 30px;
+  font-weight: 200;
+}
+.container-2 h1{
+  font-size: 120px;
+  color: #425a73;
+  position: absolute;
+  bottom:100px;
+  left: 100px;
+}
+.container-3{
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_me_left{
+  width: 50%;
+  text-align: center;
+}
+.about_me_left img{
+  width: 100%;
+}
+
+
+.about_me_right{
+  width: 50%;
+  height: 100%;
+}
+.about_me_right li{
+  display: block;
+  margin: 30px;
+  
+}
+
