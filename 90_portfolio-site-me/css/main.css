@@ -9,50 +9,93 @@
 *{
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family:"Noto Sans KR", sans-serif;
+  font-size: 16px;
+}
+.font-en{
+  font-family:"Open Sans",sans-serif;
+}
+a{
+  color: #000;
+  text-decoration: none;
+}
+.align{
+  width: 80%;
+  margin: 0 auto;
+}
 .menu_icon{
   font-size: 60px;
-
+  cursor: pointer;
 }
 
 .menu {
-  
-  cursor: pointer;
-
   width: 100%;
   padding :10px 30px;
   display: flex;
   position: fixed;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 1;
 }
 .menu ul{
+  font-weight: bold;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: bold;
   color:#000;
-  font-size: 30px;
+  font-size: 24px;
   top:-30px;
-  left:30%;
+  left:20%;
   opacity:0;
-  transition:.5s;
+  transition:.5s ;
 }
 /* 각 메뉴 선택시 색상이 바뀌면서 아래 화면에 출력 */
 .menu ul.clicked{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: bold;
-  color:#000;
-  font-size: 30px;
   top:20px;
-  left:30%;
   opacity: 1;
 }  
 
 .menu ul li{
+  cursor: pointer;
   white-space: nowrap;
-  padding-left: 30px;
+  margin-left: 70px;
+  position: relative;
+  top:-20;
+  transition: .5s;
+}
+.menu ul li:hover {
+  transform: translateY(-10px);
+}
+.menu ul li:hover a{
+  color :#425a73;
+}
+.menu ul li:hover::after{
+  display: block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #bbdcfb;
+  width: 100%;
+  bottom: -10px;
+}
+.container-2{
+  background-color: #bbdcfb;
+  height: 100vh;
+  position: relative;
+  
+}
+.container-2 p:first-child{
+  position: absolute;
+  right: 30px;
+  top: 120px;
+  transform: rotate(90deg);
+  font-size: 30px;
+  font-weight: 200;
 }
