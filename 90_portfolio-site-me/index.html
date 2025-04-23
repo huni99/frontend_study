@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HUN'S SITE</title>
   <link rel="icon" href="./img/1234.ico" >
-
+  <!-- 리셋 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-
+  <!-- 구글 폰트 -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- 구글 아이콘 -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
+  <!-- 스크롤 매직 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 내파일 연결 -->
   <link rel="stylesheet" href="./css/main.css">
   <script defer src="./js/main.js"></script>
 </head>
@@ -23,7 +29,7 @@
         <span class="material-symbols-outlined menu_icon">
           menu
         </span>
-        <ul>
+        <ul class="font-en">
           <li><a href="#home">HOME</a></li>
           <li><a href="#about_me">ABOUT ME</a></li>
           <li><a href="#skills">SKILLS</a></li>
@@ -34,7 +40,7 @@
     </div>
   </header>
   <section id="home">
-    <div class="container container-2">
+    <div class="container container-2 font-en">
       <p>Hun's <br> portfolio</p>
       <p>Developer <br>Jeong Gil Hun</p>
       <h1>Full <br> Stack Developer</h1>
@@ -43,7 +49,7 @@
 
   </section>
   <section id="about_me">
-    <div  class="container-3 " >
+    <div  class="container-3 font-en" >
       <div class="about_me_left">
         <!-- 나중에 내 사진으로 변경 -->
         <h2>ABOUT ME</h2>
@@ -51,7 +57,7 @@
         <div class="about_me_left_bg"></div>
       </div>
       <div class="about_me_right">
-        <div class="text1 text">
+        <div class="text">
           <ul>
             <li>이름:정길훈</li>
             <li>나이:27세</li>
@@ -60,7 +66,7 @@
             <li></li>
           </div>
           </ul>
-          <div class="text2 text">
+          <div class="text">
             <ul>
               <li></li>
               <li></li>
@@ -70,7 +76,7 @@
               
             </ul>
           </div>
-          <div class="text3 text">
+          <div class="text">
             <ul>
               <li></li>
               <li>dsadsadsdsa</li>
@@ -92,7 +98,64 @@
       </div>
     </div>
   </section>
-  
+  <section id="skills">
+    <div class="container container-4 font-en">
+      <h2 >SKILLS</h2>
+      <div class="skill">
+        <h3>I Can Do!</h3>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="skill_text">
+        <ul>
+          <li>
+            <h4 class="font-en">HTML5</h4>
+            <ul>
+              <li>웹페이지 구조 설계</li>
+              <li>시맨틱 태그</li>
+            </ul>
+          </li>
+          <li>
+            <h4 class="font-en">CSS3</h4>
+            <ul>
+              <li>웹페이지 레이아웃 설계</li>
+              <li>웹페이지 디자인</li>
+              <li>반응형 제작</li>
+            </ul>
+          </li>
+          <li>
+            <h4 class="font-en">JavaScript</h4>
+            <ul>
+              <li>DOM 조작, 제어</li>
+              <li>이벤트 처리</li>
+              <li>비동기 통신</li>
+            </ul>
+          </li>
+          <li>
+            <h4 class="font-en">Jquery</h4>
+            <ul>
+              <li>DOM 조작, 제어</li>
+              <li>이벤트 처리</li>
+              <li>비동기 통신</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+  <section id="project">
+    <div class="container"></div>
+
+  </section>
+  <section id="contact">
+    <div class="container"></div>
+  </section>
 
 </body>
 </html>
