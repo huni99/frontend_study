@@ -77,3 +77,31 @@ imagecloseBtn.addEventListener('click',function(){
 // 모달 바깥 영역 클릭 시 닫기
 // ESC 키로 닫기
 // fade 애니메이션 넣기
+
+// 현재 연도 표시
+// 날짜 정보를 가진 JS의 Date 객체를 활용
+const this_year=document.getElementsByClassName('this_year');
+// const this_year=document.querySelector('.this_year')
+this_year[0].textContent=new Date().getFullYear();
+
+// 페이지 최상단으로 이동
+const to_top= document.querySelector('#to-top');
+
+//페이지에 스크롤 이벤트 감지를 추가!
+// window: 브라우저 창 객체 
+window.addEventListener('scroll',function(){
+  console.log(window.scrollY);
+
+  if(window.scrollY>500){
+    // 요소 보이기
+    to_top.style.opacity='1';
+    to_top.style.transform='translate(0)';
+    
+  }
+  else{
+    // 요소 숨기기
+    to_top.style.opacity='0';
+    to_top.style.transform='translateX(100px)';
+  }
+  
+})
