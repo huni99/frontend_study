@@ -15,7 +15,7 @@ html{
 }
 .title{
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
   text-align: center;
   margin-bottom: 50px;
@@ -359,6 +359,60 @@ cursor: default;}
   display: flex;
   column-gap: 40px;
 
+}
+
+/* CONTACT */
+.contact {
+  padding: 200px 0;
+}
+.contact .contact__info li {
+  line-height: 2;
+  text-align: center;
+  transition: 1s;
+  opacity: 0;
+}
+/* 애니메이션 효과 추가 */
+.contact .contact__info li:nth-child(1),
+.contact .contact__info li:nth-child(3){
+/* 오른쪽에서 왼쪽으로 나타나는 */
+transform: translateX(150px);
+
+}
+.contact .contact__info li:nth-child(2){
+/* 왼쪽에서 오른쪽으로 나타나는 */
+transform: translateX(-150px);
+}
+.contact.show .contact__info li{
+  transform: translateX(0);
+  opacity: 1;
+
+}
+.contact .contact__sns {
+  margin-top: 20px;
+}
+.contact .contact__sns ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+/* 애니메이션 추가 */
+.contact .contact__sns ul li{
+  transform: translateY(100px);
+  transition: 1s;
+  opacity: 0;
+}
+.contact.show .contact__sns ul li{
+  transform: translateY(0);
+  opacity: 1;
+}
+.contact.show .contact__sns ul li:nth-child(1){
+  transition-delay: 0.2s;
+}
+.contact.show .contact__sns ul li:nth-child(2){
+  transition-delay: 0.4s;
+}
+.contact .contact__sns ul li img {
+  width: 30px;
 }
 
 /* MODAL */
