@@ -1,3 +1,4 @@
+// 메뉴 
 const clickedUl = document.querySelector('ul');
 const menu=document.querySelector('.menu_icon');
 
@@ -10,6 +11,18 @@ else{
   
   });
 
+
+// about_me 화살표
+let index=0;
+const arrow=document.querySelectorAll('.arrow_com');
+const text = document.querySelectorAll('.text');
+
+arrow[index].addEventListener('click',function(){
+
+})
+
+  
+  
   
   
 

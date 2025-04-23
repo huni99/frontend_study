@@ -125,29 +125,82 @@ div h2{
   bottom:100px;
   left: 100px;
 }
+#about_me{
+  height: 100vh;
+}
 .container-3{
-  margin-top: 200px;
+  padding-top: 150px;
+  /* margin-top: 200px; */
+  height: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .about_me_left{
-  width: 50%;
-  text-align: center;
+  width: 500px;
+  padding-right: 100px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  
+  
 }
 .about_me_left img{
-  width: 100%;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
 }
+.about_me_left_bg{
+  background-color: #bbdcfb;
+  width: 1000px;
+  height: 460px;
+  position: absolute;
+  z-index: -2;
+}
+.about_me_left img,
+.about_me_left h2{
+  transform: translate(80px,-30px);
+}
+
 
 
 .about_me_right{
-  width: 50%;
-  height: 100%;
+  width: 500px;
+  height: 460px;
+  display: flex;
+  position: relative;
+  justify-content: start;
+  align-items: center;
 }
 .about_me_right li{
   display: block;
-  margin: 30px;
+  margin: 30px 0 0 100px;
   
 }
+.arrow{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.arrow_com{
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: 300;
+}
+.arrow_off{
+  color:gray;
+}
+.about_me_right .text{
+  position: absolute;
+  top:60px;
+} 
 
+.text2{
+  display: none;
+}
+.text3{
+  display: none;
+}
