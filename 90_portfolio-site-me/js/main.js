@@ -5,7 +5,7 @@ const controller = new ScrollMagic.Controller();
 spyEls.forEach(function(el,index){
   new ScrollMagic.Scene({//감시할 장면 추가 및 옵션 지정
     triggerElement : el, // 보여짐 여부를 감시할 요소를 지정
-    triggerHook: 0.5 //화면의 50% 지점에서 보여짐 여부 감시 (0~1사이 지정)
+    triggerHook: 0.6 //화면의 50% 지점에서 보여짐 여부 감시 (0~1사이 지정)
 
   })
   .setClassToggle(el,'show')//요소가 화면에 보이면 show 클래스 추가
