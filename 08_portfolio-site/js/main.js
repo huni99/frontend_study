@@ -37,3 +37,43 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// 모달창 띄우기 
+const modalBtn = document.querySelector('.project .btn-modal');
+const modalEl = document.querySelector('#modal');
+const closeBtn = document.querySelector('#modal .btn-close');
+const imageModalBtn = document.querySelectorAll('.project .btn-modal-image');
+const imageModalEl = document.querySelector('#imageModal');
+const imagecloseBtn = document.querySelector('#imageModal .btn-close');
+const imageEl =document.querySelector('#imageModal img');
+
+modalBtn.addEventListener('click',function(){
+  modalEl.style.display="flex";
+})
+closeBtn.addEventListener('click',function(){
+  modalEl.style.display="none";
+})
+
+
+imageModalBtn.forEach(function(imageElm,index){
+  imageElm.addEventListener('click',function(){
+    imageModalEl.style.display="flex";
+    // if(index===0){
+    //   imageEl.src=`./images/work_1.jpg`;
+    // }
+    // else if(index===1){
+    //   imageEl.src=`./images/work_2.jpg`;
+    // }
+    
+    // imageEl.src=`./images/work_${index+1}.jpg`;
+
+    imageEl.src=imageElm.dataset.imageSrc;
+    })
+})
+imagecloseBtn.addEventListener('click',function(){
+  imageModalEl.style.display="none";
+})
+// 추가로 더 해볼 만한 것!
+// 모달 바깥 영역 클릭 시 닫기
+// ESC 키로 닫기
+// fade 애니메이션 넣기
