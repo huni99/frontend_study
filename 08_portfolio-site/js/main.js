@@ -39,17 +39,21 @@ const swiper = new Swiper('.swiper', {
 });
 
 // 모달창 띄우기 
-const modalBtn = document.querySelector('.project .btn-modal');
+const modalBtn = document.querySelectorAll('.project .btn-modal');
 const modalEl = document.querySelector('#modal');
 const closeBtn = document.querySelector('#modal .btn-close');
 const imageModalBtn = document.querySelectorAll('.project .btn-modal-image');
 const imageModalEl = document.querySelector('#imageModal');
 const imagecloseBtn = document.querySelector('#imageModal .btn-close');
 const imageEl =document.querySelector('#imageModal img');
-
-modalBtn.addEventListener('click',function(){
-  modalEl.style.display="flex";
+modalBtn.forEach(function(El){
+  El.addEventListener('click',function(){
+    modalEl.style.display="flex";
+  })
 })
+// modalBtn.addEventListener('click',function(){
+//   modalEl.style.display="flex";
+// })
 closeBtn.addEventListener('click',function(){
   modalEl.style.display="none";
 })
@@ -105,3 +109,19 @@ window.addEventListener('scroll',function(){
   }
   
 })
+
+// 모바일용 메뉴
+const btnHamburger= document.querySelector('.btn-hamburger');
+const navEl= document.querySelector('header nav');
+const aEl=document.querySelectorAll('nav ul li a');
+
+
+btnHamburger.addEventListener('click',function(){
+  navEl.classList.toggle('active');
+
+});
+aEl.forEach(function(El){
+  El.addEventListener('click',function(){  
+    navEl.classList.remove('active');
+  })
+});
