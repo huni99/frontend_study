@@ -79,7 +79,7 @@ div h2{
   transition: .5s;
 }
 .menu ul li:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .menu ul li:hover a{
   color :#425a73;
@@ -95,7 +95,11 @@ div h2{
 }
 #home{
   /* 나중에 home 백그라운드 이미지 삽입 */
-  background-color: #bbdcfb;
+  background-image: url(../img/sea.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-color: #bbdcfb; */
   height: 100vh;
 }
 .container-2{
@@ -130,7 +134,9 @@ div h2{
 
 
 #about_me{
+  /* background-color: white; */
   height: 100vh;
+  
 }
 .container-3{
   padding-top: 150px;
@@ -162,7 +168,7 @@ div h2{
   width: 1000px;
   height: 460px;
   position: absolute;
-  z-index: -2;
+  z-index:-1;
 }
 .about_me_left img,
 .about_me_left h2{
