@@ -100,6 +100,19 @@ arrow[1].addEventListener('click',function(){
   
 })
 
+// contact 버튼 클릭시 모달창
+
+const btnModal = document.querySelector('.btn-modal');
+const modal = document.querySelector('.modal');
+const btnClose =document.querySelector('.btn-close');
+btnModal.addEventListener('click',function(){
+  modal.style.top=0;
+  modal.style.opacity=1;
+})
+btnClose.addEventListener('click',function(){
+  modal.style.top='-100vh';
+  modal.style.opacity=0;
+})
 
   
   
