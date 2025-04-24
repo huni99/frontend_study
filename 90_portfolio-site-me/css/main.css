@@ -29,7 +29,7 @@ a{
 .container{
   width: 1200px;
   margin:0 auto;
-  height: 100vh;
+  height: 900px;
 }
 div h2{
   font-size: 60px;
@@ -101,7 +101,7 @@ div h2{
   background-size: cover;
   background-position: center;
   /* background-color: #bbdcfb; */
-  height: 100vh;
+  height: 900px;
 }
 .container-2{
   height: 100%;
@@ -221,7 +221,7 @@ div h2{
 
 #skills{
   width: 100%;
-  height: 100vh;
+  height: 900px;
 }
 .container-4{
   padding-top: 100px;
@@ -295,7 +295,7 @@ div h2{
 /* project */
 #project{
   background-color: #e3edf8;
-  height: 100vh;
+  height: 900px;
   width: 100%;
 }
 
@@ -379,6 +379,9 @@ div h2{
 #contact{
   height: 100vh;
 }
+.container-6{
+  position: relative;
+}
 #contact .btn-modal{
   margin-top: 150px;
   width: 400px;
@@ -387,6 +390,40 @@ div h2{
 .modal .btn-close{
   cursor: pointer;
 }
+.lamp{
+  position: absolute;
+  width: 80px;
+  border-radius: 10px;
+  height: 10px;
+  background-color: yellow;
+
+}
+.lamp1{
+  top: 350px;
+  left: 430px;
+}
+.lamp2{ 
+  top: 290px;
+  left: 460px;
+  transform:rotate(45deg);
+}
+.lamp3{ 
+  top: 270px;
+  left:530px;
+  transform:rotate(90deg);
+}
+.lamp4{
+  top: 290px;
+  left:600px;
+  transform:rotate(-45deg);
+}
+.lamp5{
+  top: 350px;
+  left: 630px;
+}
+
+
+/* 모달 */
 .container-6{
   
   display: flex;

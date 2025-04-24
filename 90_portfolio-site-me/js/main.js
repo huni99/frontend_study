@@ -110,7 +110,7 @@ btnModal.addEventListener('click',function(){
   modal.style.opacity=1;
 })
 btnClose.addEventListener('click',function(){
-  modal.style.top='-100vh';
+  modal.style.top='-120vh';
   modal.style.opacity=0;
 })
 
