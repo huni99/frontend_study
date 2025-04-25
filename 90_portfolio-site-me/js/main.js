@@ -5,7 +5,7 @@ const controller = new ScrollMagic.Controller();
 spyEls.forEach(function(el,index){
   new ScrollMagic.Scene({//감시할 장면 추가 및 옵션 지정
     triggerElement : el, // 보여짐 여부를 감시할 요소를 지정
-    triggerHook: 0.1//화면의 50% 지점에서 보여짐 여부 감시 (0~1사이 지정)
+    triggerHook: 0.3//화면의 50% 지점에서 보여짐 여부 감시 (0~1사이 지정)
 
   })
   .setClassToggle(el,'show')//요소가 화면에 보이면 show 클래스 추가
@@ -27,31 +27,57 @@ else{
   });
 //메뉴 스크롤 정도에 따라 색상 변경
 const menuEl= document.querySelectorAll('.menu li a');
-
-
-
-
-window.addEventListener('scroll',function(){
-  for(let i=0; i <5; i++ ){
-    menuEl[i].style.color=' #000';
-  }
-  if(this.scrollY<600){
-    menuEl[0].style.color=' #425a73';
-  }
-  else if(this.scrollY<1400){
-    menuEl[1].style.color=' #425a73';
-  }
-  else if(this.scrollY<2400){
-    menuEl[2].style.color=' #425a73';
-  }
-  else if (this.scrollY<3400){
-    menuEl[3].style.color=' #425a73';
+function scrollset(x){
+  if(x.matches){
+    window.addEventListener('scroll',function(){
+      for(let i=0; i <5; i++ ){
+        menuEl[i].style.color=' #000';
+      }
+      if(this.scrollY<950){
+        menuEl[0].style.color=' #425a73';
+      }
+      else if(this.scrollY<1900){
+        menuEl[1].style.color=' #425a73';
+      }
+      else if(this.scrollY<2850){
+        menuEl[2].style.color=' #425a73';
+      }
+      else if (this.scrollY<4750){
+        menuEl[3].style.color=' #425a73';
+      }
+      else{
+        menuEl[4].style.color=' #425a73';
+      }
+    })
   }
   else{
-    menuEl[4].style.color=' #425a73';
+    window.addEventListener('scroll',function(){
+      for(let i=0; i <5; i++ ){
+        menuEl[i].style.color=' #000';
+      }
+      if(this.scrollY<950){
+        menuEl[0].style.color=' #425a73';
+      }
+      else if(this.scrollY<1900){
+        menuEl[1].style.color=' #425a73';
+      }
+      else if(this.scrollY<2850){
+        menuEl[2].style.color=' #425a73';
+      }
+      else if (this.scrollY<3800){
+        menuEl[3].style.color=' #425a73';
+      }
+      else{
+        menuEl[4].style.color=' #425a73';
+      }
+    })
   }
-  
-})
+}
+const mobile = window.matchMedia('(max-width: 767px)');
+scrollset(mobile);
+mobile.addEventListener('change', function () {
+scrollset(mobile);
+});
 
 
 // about_me 화살표
@@ -104,14 +130,22 @@ arrow[1].addEventListener('click',function(){
 const btnModal = document.querySelector('.btn-modal');
 const modal = document.querySelector('.modal');
 const btnClose =document.querySelector('.btn-close');
+const modalbg = document.querySelector('.modal-bg');
+
+
 btnModal.addEventListener('click',function(){
   modal.style.top=0;
   modal.style.opacity=1;
 })
 btnClose.addEventListener('click',function(){
-  modal.style.top='-120vh';
+  modal.style.top='-100vh';
   modal.style.opacity=0;
 })
+modalbg.addEventListener('click',function(){
+  modal.style.top='-100vh';
+  modal.style.opacity=0;
+})
+
 
   
   

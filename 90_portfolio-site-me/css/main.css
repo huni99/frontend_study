@@ -19,6 +19,15 @@ body{
   font-family:"Noto Sans KR", sans-serif;
   font-size: 16px;
 }
+.scroll{
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0;
+}
 .font-en{
   font-family:"Open Sans",sans-serif;
 }
@@ -50,7 +59,7 @@ div h2{
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255,255,255,0.5);
-  z-index: 1;
+  z-index: 4;
 }
 .menu ul{
   font-weight: bold;
@@ -190,11 +199,14 @@ div h2{
 .about_me_right li{
   display: block;
   margin: 30px 0 0 100px;
+  line-height: 26px;
   
   
 }
 .arrow{
   position: absolute;
+  z-index: 2;
+
   top: 0;
   right: 0;
 }
@@ -324,6 +336,8 @@ div h2{
   top:30px;
   left:30px;
   transition-delay: 0.2s;
+  z-index: 2;
+
 }
 .projectEl1 img{
   width: 60%;
@@ -337,6 +351,8 @@ div h2{
   background-color: #000;
   color: white;
   font-weight: bold;
+  position: relative;
+  
 }
 .projectEl2{
   top:30px;
@@ -368,10 +384,12 @@ div h2{
   height:900px;
 }
 #contact .btn-modal{
+  
   margin-top: 150px;
   width: 400px;
   cursor: pointer;
   position: relative;
+  z-index: 3;
 }
 .modal .btn-close{
   cursor: pointer;
@@ -411,7 +429,6 @@ div h2{
 }
 
 
-/* 모달 */
 .container-6{
   
   display: flex;
@@ -419,51 +436,61 @@ div h2{
   justify-content: center;
   align-items: center;
 }
-.modal-container{
-  width: 1200px;
-  margin: 0 auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
 
-}
-
+/* 모달 */
 .modal{
   transition: 1s;
   position: fixed;
-  top:-120vh;
+  height: 100vh;
   opacity: 0;
-  padding-top: 100px;
   left:0;
   right: 0;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  
+
+}
+.modal-bg{
+  position: fixed;
+  width: 100%;
+  height: 110vh;
   background-color: rgba(0,0,0,0.5);
   z-index: 10;
+}
+
+.modal-container{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+
 
 }
 
 .modal-container .modal-header{
-  width: 50%;
+  width: 100%;
   background-color: #425a73;
   display: flex;
   justify-content: space-between;
-  padding :0 10px 0 21%;
+  padding :5px 10px 10px 41%;
   align-items: center;
   border-radius: 5px 5px 0 0;
   font-size: 30px;
-
-
 }
 .modal-container .modal-body{
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #e3edf8;
-  padding-bottom: 30px;
   border-radius: 0 0 5px 5px;
 }
 .modal-body a {
@@ -477,8 +504,8 @@ div h2{
   margin-right: 20px;
 }
 .modal-body p {
-  margin-top: 40px;
   font-size: 24px;
+  margin :40px;
   font-weight: bold;
   color: black;
 }
@@ -586,5 +613,18 @@ div h2{
   }
   #contact{
     margin-top: 100px;
+  }
+  .btn-modal{
+    transform: scale(0.7);
+  }
+  .modal-container{
+    width: 400px;
+  }
+  .modal-body a, .modal-body p{
+    margin:20px;
+  }
+
+  .modal-container .modal-header{
+    padding: 5px 10px 10px 39%;
   }
 }
