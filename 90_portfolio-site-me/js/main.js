@@ -42,7 +42,7 @@ function scrollset(x){
       else if(this.scrollY<2850){
         menuEl[2].style.color=' #425a73';
       }
-      else if (this.scrollY<4750){
+      else if (this.scrollY<4550){
         menuEl[3].style.color=' #425a73';
       }
       else{
@@ -52,6 +52,7 @@ function scrollset(x){
   }
   else{
     window.addEventListener('scroll',function(){
+      console.log(this.scrollY);
       for(let i=0; i <5; i++ ){
         menuEl[i].style.color=' #000';
       }
@@ -138,11 +139,11 @@ btnModal.addEventListener('click',function(){
   modal.style.opacity=1;
 })
 btnClose.addEventListener('click',function(){
-  modal.style.top='-100vh';
+  modal.style.top='-120vh';
   modal.style.opacity=0;
 })
 modalbg.addEventListener('click',function(){
-  modal.style.top='-100vh';
+  modal.style.top='-120vh';
   modal.style.opacity=0;
 })
 
