@@ -5,7 +5,7 @@ const controller = new ScrollMagic.Controller();
 spyEls.forEach(function(el,index){
   new ScrollMagic.Scene({//감시할 장면 추가 및 옵션 지정
     triggerElement : el, // 보여짐 여부를 감시할 요소를 지정
-    triggerHook: 0.6 //화면의 50% 지점에서 보여짐 여부 감시 (0~1사이 지정)
+    triggerHook: 0.1//화면의 50% 지점에서 보여짐 여부 감시 (0~1사이 지정)
 
   })
   .setClassToggle(el,'show')//요소가 화면에 보이면 show 클래스 추가
@@ -32,7 +32,6 @@ const menuEl= document.querySelectorAll('.menu li a');
 
 
 window.addEventListener('scroll',function(){
-  console.log(window.scrollY);
   for(let i=0; i <5; i++ ){
     menuEl[i].style.color=' #000';
   }
@@ -42,10 +41,10 @@ window.addEventListener('scroll',function(){
   else if(this.scrollY<1400){
     menuEl[1].style.color=' #425a73';
   }
-  else if(this.scrollY<2100){
+  else if(this.scrollY<2400){
     menuEl[2].style.color=' #425a73';
   }
-  else if (this.scrollY<2800){
+  else if (this.scrollY<3400){
     menuEl[3].style.color=' #425a73';
   }
   else{
