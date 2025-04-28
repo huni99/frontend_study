@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bead{
+      width: 50px;
+      
+      height:50px;
+      background-color:aqua;
+      border: transparent;
+      border-radius: 50%;
+      margin-top: 50px;
+    }
+    .bead_box{
+      width: 1000px;
+      height: 300px;
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <h1> 홀수? 짝수?</h1>
+  <button type="button" class="btn_1">구슬 추가</button>
+  <button type="button" class="btn_2"> 홀짝 </button>
+  <button type="button" class="btn_3">초기화</button>
+  <div class="bead_box">
+  </div>
+
+  <script>
+    const btn1=document.querySelector('.btn_1');
+    const btn2=document.querySelector('.btn_2');
+    const btn3=document.querySelector('.btn_3');
+    const bead=document.querySelector('.bead');
+    const bead_box=document.querySelector('.bead_box');
+    
+    btn1.addEventListener('click',function(){
+
+      bead_box.innerHTML+='<div class="bead"></div>';
+    })
+    btn2.addEventListener('click',function(){
+      const num = bead_box.childElementCount;
+      num%2===1 ? window.alert('홀수'):window.alert('짝수'); 
+      
+    })
+    
+    btn3.addEventListener('click',function(){
+
+    bead_box.innerHTML='';
+    })
+  </script>  
+</body>
+</html>
