@@ -1,0 +1,39 @@
+<!-- https://devkgn24.notion.site/17cfda8bae5780e696becbc773e3005a -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+    .btn-plus{
+      border: 1px solid black;
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      display: block;
+      border-radius: 3px;
+    }
+    img{
+      width: 100px;
+      height: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <button class="btn-plus" type="button">+</button>
+  <img src="./img/logo_resize.png" alt="">
+  <script>
+    let sum=100;
+    const btn = document.querySelector('.btn-plus');
+    const img = document.querySelector('img');
+    btn.addEventListener('click',function(){
+        sum+=100;
+        img.style.width=sum+'px';
+        img.style.height=sum+'px';
+
+    })
+  </script>
+</body>
+</html>

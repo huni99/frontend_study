@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  input{
+    display: block;
+  }
+  .img{
+    width: 100px;
+    height: 100px;
+  }
+  .btn{
+    border: 1px solid black;
+      width: 50px;
+      height: 30px;
+      font-size: 15px;
+      display: block;
+      border-radius: 3px;
+    
+  }
+  </style>
+</head>
+<body>
+  <label for="wid">가로</label>
+  <input type="number" id="wid">
+  <label for="hei">세로</label>
+  <input type="number" id="hei">
+  <button type="button" class="btn">변경</button>
+  <img src="./img/logo_resize.png" alt="" class="img">
+
+  <script>
+    const wid = document.querySelector('#wid');
+    const hei = document.querySelector('#hei');
+    const btn = document.querySelector('.btn');
+    const img = document.querySelector('.img');
+    
+    btn.addEventListener('click',function(){
+      img.style.width = wid.value+'px';
+      img.style.height = hei.value+'px';
+    })
+
+    
+  </script>
+</body>
+</html>
