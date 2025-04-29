@@ -7,16 +7,26 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- <input type="number"> -->
+  <input type="number">
 
   <script>
     // 1번 문제
     // 질의응답 창(prompt)을 이용하여 사용자에게 숫자 2개를 입력받은 다음 그 합을 출력하세요.
     const num1=prompt('숫자를 입력하세요');
     const num2=prompt('숫자를 입력하세요');
+    // const num2=Number(prompt('숫자를 입력하세요');)애초에 이렇게 number로 받아도됨
     const result = Number(num1)+Number(num2)
     document.write(result);
     
+
+
+    
+    // (참고) 입력받은 데이터가 문자인 경우 숫자로 바꿀때
+    // 예 number input
+    // document.querySelector('input[type="number"]').addEventListener('input',function () {
+    //   console.log(this.value);
+    //   console.log(typeof this.value);
+    // });
 
 
     // 1번 풀이
