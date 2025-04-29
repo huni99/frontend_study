@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .cal{
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cal">
+  <h1>계산기</h1>
+  <label for="first">첫번째 값 :</label>
+  <input type="number" id="first">
+  <label for="second">두번째 값 :</label>
+  <input type="number" id="second">
+</div>
+<button class="a">+</button>
+<button class="b">-</button>
+<button class="c">x</button>
+<button class="d">/</button>
+<button class="e">%</button>
+<hr>
+<div class="result">계산 결과:</div>
+<script>
+  const f =document.querySelector('#first');
+  const s =document.querySelector('#second');
+  const a= document.querySelector('.a');
+  const b= document.querySelector('.b');
+  const c= document.querySelector('.c');
+  const d= document.querySelector('.d');
+  const e =document.querySelector('.e');
+  const reEl = document.querySelector('.result');
+  let result ;
+  a.addEventListener('click',function(){
+    result= Number(f.value)+ Number(s.value);
+    reEl.textContent=`계산 결과:${result}`;
+  })
+  b.addEventListener('click',function(){
+    result= Number(f.value)- Number(s.value);
+    reEl.textContent=`계산 결과:${result}`;
+  })
+  c.addEventListener('click',function(){
+    result= Number(f.value)* Number(s.value);
+    reEl.textContent=`계산 결과:${result}`;
+  })
+  d.addEventListener('click',function(){
+    result= Number(f.value)/ Number(s.value);
+    reEl.textContent=`계산 결과:${result}`;
+  })
+  e.addEventListener('click',function(){
+    result= Number(f.value)% Number(s.value);
+    reEl.textContent=`계산 결과:${result}`;
+  })
+
+
+</script>
+</body>
+</html>
