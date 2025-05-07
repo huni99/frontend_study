@@ -26,7 +26,8 @@
     const img = document.querySelector('.img-sponge');
     const range = document.querySelector('#rangeValue');
     function radiusAdd(round){
-      img.style.borderRadius =`${round}px`;
+      
+      img.style.borderRadius =`${Number(round)}px`;
       range.textContent=round;
 
 

@@ -204,15 +204,20 @@
     
 
     // Quiz: 누가 이겼는지 출력하기
-    if(com===player){
+    // player와 com의 차를 이용
+    // 0이면 비김
+    // 1또는 -2 이면 내가 이김
+    // 그외는 내가짐
+    const whowin = player-com;
+    if(whowin===0){
       document.write(`비겼습니다.`);
-    }else if(com>player){
-      document.write(`졌습니다`);
-    }else{
-      document.write(`이겼습니다`);
 
+    }else if(whowin===1||whowin===-2){
+      document.write(`이겼습니다`);
     }
-    
+    else{
+      document.write(`졌습니다`);
+    }    
   </script>
 </body>
 </html>
