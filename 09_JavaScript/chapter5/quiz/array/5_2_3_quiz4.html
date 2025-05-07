@@ -20,12 +20,15 @@
       if(max<points[i]){
         max= points[i];
       }
-    }
-    for(i=0;i<points.length;i++){
       if(min>points[i]){
         min= points[i];
       }
     }
+    // for (const el of points) {
+    //   if(max<el) max=el;
+    //   if(min<el) min=el;
+      
+    // }
     document.write(max,'<br>');
     document.write(min,'<br>');
     
@@ -36,9 +39,14 @@
     points.sort(function(a,b){
       return a-b;
     });
-    document.write(points[0],'<br>');
+    document.write(points[0],'<br>');//최소
+     // document.write(points[points.length-1],'<br>'); 최대
     points.reverse();
-    document.write(points[0],'<br>');
+    document.write(points[0],'<br>');//최대
+  
+    //(참고) ES6차 spread 연산자
+    // document.write(`최소값: ${Math.min(...points)}<br>`);
+    // document.write(`최대값: ${Math.max(...points)}<br>`);  spread 연산자를 이용해서 배열이 풀려서 값만 들어감 
     
   </script>
 </head>

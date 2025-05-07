@@ -16,6 +16,7 @@
     // 풀이3
     const bool = fruits.includes(disliked);
     const index= fruits.indexOf(disliked);
+    // includes를 사용안하고 indexOf에서 반환값이 -1 즉 if(index===-1)일경우로 해도 무방
 
     if(bool){
       fruits.splice(index,1);
