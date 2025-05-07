@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .img-sponge {
+      width: 150px;
+      height: 150px;
+      border: 4px dotted green;
+      border-radius: 40px;
+    }
+</style>
+</head>
+<body>
+  <!-- 1번 -->
+  <img src="../img/sponge.png" alt="스폰지밥" class="img-sponge">
+  <input type="range" min="0" max="75" step="5"  oninput="radiusAdd(this.value)"><!-- onchange -> 값이 확정되면 바뀜 oninput -> 값의 변경이 있을때마다 바뀜 -->
+  <span id="rangeValue">40</span>
+
+  <script>
+    // 1번
+    const img = document.querySelector('.img-sponge');
+    const range = document.querySelector('#rangeValue');
+    function radiusAdd(round){
+      img.style.borderRadius =`${round}px`;
+      range.textContent=round;
+
+
+
+    }
+    
+  </script>
+</body>
+</html>
