@@ -103,13 +103,15 @@
 
     // 날짜를 6개월 전으로 설정
     d= new Date();
-    d.setFullYear(d.getFullYear(),d.getMonth()-6);
+    // d.setFullYear(d.getFullYear(),d.getMonth()-6);
+    d.setMonth(d.getMonth()-6);
     document.write(d,'<br>');
 
 
     // 날짜를 지난 달의 마지막 날로 설정
     d = new Date();
-    d.setMonth(d.getMonth(),0);//0:지난달 말일 
+    // d.setMonth(d.getMonth(),0);//0:지난달 말일 
+    d.setDate(0);
     document.write(d,'<br>');
 
   </script>

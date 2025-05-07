@@ -13,6 +13,34 @@
     // 그리고 생성한 날짜 객체 정보를 예쁘게 출력하세요.
 
     // 풀이1
+    const day = new Date(2023,1,29,3,12,0);
+    let da;
+    switch(day.getDay()){
+      case 0 : 
+        da='일요일'
+      break;
+      case 1 : da='월요일'
+      break;
+      case 2 : da='화요일'
+      break;
+      case 3 : da='수요일'
+      break;
+      case 4 : da='목요일'
+      break;
+      case 5 : da='금요일'
+      break;
+      case 6 : da='토요일'
+      break;
+    }
+
+    // (ES2017) padStart(문자열의 총 길이, 추가할 문자):문자열 앞에 지정된 문자를 지정된 길이만큼 추가
+    const month = String(day.getMonth()+1).padStart(2,'0');
+    document.write(`${day.getFullYear()}/${month}/${day.getDate()}/${da}/${day.getHours()}시/${day.getMinutes()}분`,'<br>');
+
+    // 지역(locale) 별로 변환해주는 메소드
+    document.write(day.toLocaleString('ko-KR'),'<br>'); //날짜+시간
+    document.write(day.toLocaleDateString('ko-KR'),'<br>');//날짜
+    document.write(day.toLocaleDateString('en-CA'),'<br>');//날짜
     
   </script>
 </head>
