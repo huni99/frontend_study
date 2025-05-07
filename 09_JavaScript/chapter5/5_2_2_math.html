@@ -130,32 +130,88 @@
     // 0보다 크거나 같고 1보다 작은 범위에서 숫자형 값을 반환
     // 0.0 이상 1.0 미만의 부동소수점(실수 표현 방법) 난수를 반환
     document.write('<h4>random</h4>');
+    document.write(Math.random());
     
 
     // (응용) 1에서 10 사이의 랜덤한 정수 생성
     document.write('<h4>1에서 10 사이의 랜덤한 정수</h4>');
+    const randomNum = Math.random();
+    // 0.0 <= Math.random() < 1.0 (0.0 이상 1.0 미만의 랜덤한 실수)
+    document.write(randomNum,'<br>');
+    // 0.0 *10<= Math.random()*10 < 1.0 *10(0.0 이상 10.0 미만의 랜덤한 실수)
+    document.write(randomNum*10,'<br>');
+    // 0<= Math.floor(Math.random()*10) < 10(0이상 10 미만의 랜덤한 정수)
+    document.write(Math.floor(randomNum*10),'<br>');
+    // 1 <= Math.floor(Math.random()*10)+1 < 11(1 이상 10 미만의 랜덤한 정수)
+
+    document.write(Math.floor(randomNum*10+1),'<br>');
     
 
     // 실제 실무에서 특정 범위의 랜덤 정수값을 생성하는 경우가 많음
     // 공식화: Math.floor(Math.random() * (최대값 - 최소값 + 1)) + 최소값;
     // 자주 쓰면 함수로 만들어 놓기
     document.write('<h4>최소값과 최대값 사이의 정수를 반환하는 함수</h4>');
-    
+    function getRandomInteger(min,max){
+      return Math.floor(Math.random() * (max-min +1))+min;
+    }
+    document.write(getRandomInteger(100,200),'<br>');
 
     // 실습: 가위, 바위, 보 맞추기
     document.write('<h4>가위, 바위, 보 맞추기</h4>');
+    const selectRps = prompt('가위 , 바위 , 보 중 선택하세요','가위');
+    let player;
+
+    switch(selectRps){
+      case '가위':
+        player=1;
+        break;
+      
+      case '바위':
+        player=2;
+        break;
+      
+      case '보':
+        player=3;
+        break;
+      default:
+        alert('잘못 작성 하셨습니다.');
+        location.reload();//새로고침
+        break;
+      
+    }
+
+    // 1~3사이의 랜덤한 정수 생성
+    const com = Math.floor(Math.random()*3)+1;
+    document.write(`<img src="images/math_img_${com}.jpg">`);
+    if(com===player){
+      document.write(`<img src="images/game_1.jpg">`);
+    }else {
+      document.write(`<img src="images/game_2.jpg">`);
+    }
+    document.write(`<br>`);
     
 
     // 실습: 가위, 바위, 보 게임 만들기
     document.write('<h4>가위, 바위, 보 게임</h4>');
     // 컴퓨터가 낸 것 이미지 출력
+
     document.write('컴퓨터가 낸 것');
+    document.write(`<img src="images/math_img_${com}.jpg">`);
     
     // 내가 낸 것 이미지 출력
     document.write('VS 내가 낸 것');
+    document.write(`<img src="images/math_img_${player}.jpg">`);
     
 
     // Quiz: 누가 이겼는지 출력하기
+    if(com===player){
+      document.write(`비겼습니다.`);
+    }else if(com>player){
+      document.write(`졌습니다`);
+    }else{
+      document.write(`이겼습니다`);
+
+    }
     
   </script>
 </body>
