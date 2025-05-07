@@ -83,6 +83,19 @@
 
   <script>
     // 3번
+    function getOrange(){
+      const num2 = Number(prompt('원하는 g입력'));
+      const basket = document.querySelector('.basket');
+      let html1='';
+      for(i=1;i<=num2/10;i++){
+        html1+=`<div><p>귤${i*10}g</p>`;
+        html1+='<img src="../img/gyul.png"></div>';  
+      
+      
+      }
+      basket.innerHTML=html1;
+
+    }
     
   </script>
 </body>
