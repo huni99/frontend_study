@@ -11,3 +11,5 @@ https://devkgn24.notion.site/17cfda8bae578056866de3c2ebe0caf4
 4-3번. 문제의 조건에서 200g이 되면 귤을 그만 따야한다고 명시되어 있지만 체험시작 버튼을 누르면 몇 g까지 딸 수 있는지 prompt로 입력받아 처리해 보세요.
 
 5. 함수 과제(2번, 3번 문제 제외(1번 문제만 풀어보세요)) https://devkgn24.notion.site/17dfda8bae5780b5a52fdfa5f8a8bd2b
+6. 내장 객체 과제
+https://devkgn24.notion.site/182fda8bae57805cb227f7d252f3d9cd

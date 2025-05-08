@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" class="btn">바꾸기</button>
+<style>
+  
+</style>
+<script>
+  
+  const btn = document.querySelector('.btn');
+  const html = document.querySelector('html');
+  btn.addEventListener('click',function(){
+  //   const num1 = Math.floor(Math.random()*256);
+  //   const num2 = Math.floor(Math.random()*256);
+  //   const num3 = Math.floor(Math.random()*256);
+
+  //  html.style.backgroundColor = `rgb(${num1},${num2},${num3})`;})
+
+    html.style.backgroundColor = `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`
+  })
+</script>
+</body>
+</html>
