@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <button type="button" id="bind">Add Click</button>
+  <button type="button" id="unbind">Remove Click</button>
+  <button type="button" id="trigger">trigger</button>
+
+  <script>
+    // 제이쿼리 이벤트 참고: https://api.jquery.com/category/events/
+
+    // on()으로 이벤트 핸들러를 연결하고, off()로 제거
+    function clickHandler() { 
+      alert('thank you');
+    }  
+    $('#bind').on('click',clickHandler);
+    $('#unbind').on('click',function(){
+      $('#bind').off('click',clickHandler);
+    });
+    
+    // trigger()로 이벤트를 강제로 발생
+    $('#trigger').on('click contextmenu',function(){
+      // $('#trigger').click(function(){ //deprecated
+      $('#bind').trigger('click');
+    });
+  </script>
+  
+  
+</body>
+</html>
